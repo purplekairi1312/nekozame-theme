@@ -49,6 +49,7 @@ Everything is in [`themes/`](themes).
 | btop | `btop/nekozame.theme` | `~/.config/btop/themes/`, then `color_theme = "nekozame"` |
 | Starship | `starship/starship.toml` | `~/.config/starship.toml` (a full prompt config) |
 | Zen Browser | `zen/userChrome.css` | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
+| DankMaterialShell | `dms/nekozame.json` | Settings → Theme & Colors → Custom, or `"currentThemeName": "custom"` and `"customThemeFile"` in `~/.config/dms/settings.json` |
 | Discord | `discord/nekozame.theme.css` | Vencord's themes folder |
 | Bitwig Studio | `bitwig/nekozame_bitwig_6.1.4.bte` | load it with the [Bitwig Theme Editor](https://github.com/Berikai/bitwig-theme-editor) |
 | Krita, GIMP, Aseprite | `palettes/nekozame.gpl` | the app's palettes folder |
