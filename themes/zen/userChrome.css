@@ -1,0 +1,39 @@
+/* nekozame for zen browser. generated from palette.toml by generate.py; edit the palette there.
+   Soft lavender with pastel pink, baby blue and lilac. Applies after a restart. */
+:root {
+  --zen-primary-color: #ffc0e5 !important;
+  --zen-colors-primary: #685c7f !important;
+  --zen-colors-secondary: #4f4562 !important;
+  --zen-colors-tertiary: #433a55 !important;
+  --zen-colors-border: #8a76a8 !important;
+  --zen-main-browser-background: #4f4562 !important;
+  --zen-themed-toolbar-bg: #4f4562 !important;
+  --zen-dialog-background: #4f4562 !important;
+
+  --toolbar-bgcolor: #4f4562 !important;
+  --toolbar-color: #fff4fa !important;
+  --toolbar-field-background-color: #5a4f6e !important;
+  --toolbar-field-color: #fff4fa !important;
+  --toolbar-field-focus-background-color: #685c7f !important;
+  --toolbar-field-focus-border-color: #ffc0e5 !important;
+  --urlbar-box-bgcolor: #5a4f6e !important;
+  --tab-selected-bgcolor: #685c7f !important;
+  --tab-selected-textcolor: #ffffff !important;
+  --lwt-accent-color: #433a55 !important;
+  --lwt-text-color: #fff4fa !important;
+  --arrowpanel-background: #4f4562 !important;
+  --arrowpanel-color: #fff4fa !important;
+  --arrowpanel-border-color: #8a76a8 !important;
+  --focus-outline-color: #ffc0e5 !important;
+  --button-primary-bgcolor: #ffc0e5 !important;
+  --button-primary-color: #433a55 !important;
+  --button-primary-hover-bgcolor: #ffd4ee !important;
+  --link-color: #ffc6ea !important;
+  --sidebar-background-color: #4f4562 !important;
+  --sidebar-text-color: #fff4fa !important;
+}
+
+::selection {
+  background-color: #ffc0e5 !important;
+  color: #433a55 !important;
+}

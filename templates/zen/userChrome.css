@@ -1,0 +1,39 @@
+/* nekozame for zen browser. generated from palette.toml by generate.py; edit the palette there.
+   Soft lavender with pastel pink, baby blue and lilac. Applies after a restart. */
+:root {
+  --zen-primary-color: {{orchid}} !important;
+  --zen-colors-primary: {{raised}} !important;
+  --zen-colors-secondary: {{panel}} !important;
+  --zen-colors-tertiary: {{deep}} !important;
+  --zen-colors-border: {{selection}} !important;
+  --zen-main-browser-background: {{panel}} !important;
+  --zen-themed-toolbar-bg: {{panel}} !important;
+  --zen-dialog-background: {{panel}} !important;
+
+  --toolbar-bgcolor: {{panel}} !important;
+  --toolbar-color: #fff4fa !important;
+  --toolbar-field-background-color: {{bg}} !important;
+  --toolbar-field-color: #fff4fa !important;
+  --toolbar-field-focus-background-color: {{raised}} !important;
+  --toolbar-field-focus-border-color: {{orchid}} !important;
+  --urlbar-box-bgcolor: {{bg}} !important;
+  --tab-selected-bgcolor: {{raised}} !important;
+  --tab-selected-textcolor: {{fg}} !important;
+  --lwt-accent-color: {{deep}} !important;
+  --lwt-text-color: #fff4fa !important;
+  --arrowpanel-background: {{panel}} !important;
+  --arrowpanel-color: #fff4fa !important;
+  --arrowpanel-border-color: {{selection}} !important;
+  --focus-outline-color: {{orchid}} !important;
+  --button-primary-bgcolor: {{orchid}} !important;
+  --button-primary-color: {{deep}} !important;
+  --button-primary-hover-bgcolor: {{pink}} !important;
+  --link-color: {{link}} !important;
+  --sidebar-background-color: {{panel}} !important;
+  --sidebar-text-color: #fff4fa !important;
+}
+
+::selection {
+  background-color: {{orchid}} !important;
+  color: {{deep}} !important;
+}

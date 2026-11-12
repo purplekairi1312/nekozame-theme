@@ -1,0 +1,53 @@
+/**
+ * @name nekozame
+ * @author purplekairi1312
+ * @description Soft lavender with pastel pink, baby blue, mint, lemon and lilac.
+ * @version 1.0.0
+ */
+.theme-dark, .theme-darker, .theme-midnight, .visual-refresh {
+  --background-primary: #5a4f6e;
+  --background-secondary: #4f4562;
+  --background-secondary-alt: #433a55;
+  --background-tertiary: #433a55;
+  --background-accent: #8a76a8;
+  --background-floating: #4f4562;
+  --background-mobile-primary: #5a4f6e;
+  --background-mobile-secondary: #4f4562;
+  --background-modifier-hover: rgba(255, 192, 229, 0.10);
+  --background-modifier-active: rgba(255, 192, 229, 0.16);
+  --background-modifier-selected: rgba(255, 192, 229, 0.22);
+  --background-modifier-accent: rgba(255, 209, 236, 0.18);
+  --background-base-lowest: #433a55;
+  --background-base-lower: #4f4562;
+  --background-base-low: #4f4562;
+  --background-surface-high: #5a4f6e;
+  --background-surface-higher: #685c7f;
+  --background-surface-highest: #685c7f;
+  --chat-background-default: #5a4f6e;
+  --channeltextarea-background: #685c7f;
+  --input-background: #685c7f;
+  --modal-background: #4f4562;
+  --header-primary: #ffffff;
+  --header-secondary: #e8def5;
+  --text-normal: #ffffff;
+  --text-default: #ffffff;
+  --text-muted: #d8cdec;
+  --text-link: #ffc6ea;
+  --text-positive: #c8f7dc;
+  --text-warning: #fff1b0;
+  --text-danger: #ffb3c8;
+  --text-brand: #ffc0e5;
+  --interactive-normal: #e8def5;
+  --interactive-hover: #ffd4ee;
+  --interactive-active: #ffffff;
+  --interactive-muted: #b3a7cb;
+  --channels-default: #d8cdec;
+  --brand-500: #ffc0e5;
+  --brand-560: #ffd4ee;
+  --brand-experiment: #ffc0e5;
+  --mention-background: rgba(255, 192, 229, 0.16);
+  --mention-foreground: #ffd4ee;
+  --scrollbar-thin-thumb: #8a76a8;
+  --scrollbar-auto-thumb: #8a76a8;
+  --scrollbar-auto-track: #433a55;
+}

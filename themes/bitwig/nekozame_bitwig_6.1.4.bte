@@ -1,0 +1,255 @@
+// nekozame for bitwig studio 6.1.4 (bitwig theme editor 2.4.0), purplekairi1312
+// only overrides are listed; everything else stays bitwig's default.
+// its shades are tuned by hand for bitwig, so generate.py leaves this file as is.
+Gradient: true
+
+// Core surfaces
+Window background: #5b4e6f
+Grey 0: #5b4e6f
+Grey 1: #645679
+Grey 2: #6b5d82
+Grey 3: #76698c
+Grey 4: #827597
+Grey 5: #9187a1
+Grey 6: #9388a5
+Panel Stroke (focused): #ff9ad7
+Shadow: #372a4ea0
+Selected Dashboard Tree: #956e85
+Popup insert: #b895aa
+Brighter: #ffa3db
+Dark Panel Sub-frame Stroke: #524763
+Dark Panel Sub-frame Fill: #645679
+Menu background: #5d5072
+Menu stroke: #4b3f5d
+Menu text: #f5f1fa
+Menu Icon: #ffcbea
+Menu description text: #cec3da
+Menu separator: #9287a4
+Field background: #73648c
+Tooltip Background: #534866
+Light Tooltip Background: #827498
+Tooltip Stroke: #ffaadd
+
+// Text and interface accents
+White: #f7f3fb
+Black: #4b3f5d
+Default text: #f4f0f8
+Dark Text: #4b3f5d
+Subtle Dark Text: #817398
+Subtle Light Text: #f1eaf880
+Subtler Light Text: #f1eaf844
+Medium Light Text: #f6f1fac0
+Light Text: #f7f3fb
+Lighter Text: #fcfafe
+Link Text: #ffcdea
+Link Text Rollover: #fff0f9
+Accent: #00000000
+Accent (default): #ffc0e5
+Implicit On (subtle): #ff90d3
+Accent (hitech): #b8e4ff
+Mapping: #b4f5f1
+Button stroke: #a7929e
+Button background: #9286a680
+OK Button background: #ff9cd8
+Pressed button background: #b689a4a0
+Checkbox background: #b098a780
+Button in tree background: #7b6c94
+Pressed view button background: #a38a99
+Inverted Selected Borderless Button background: #ffd6ee
+Scrollbar: #ffa7dc
+Modern Scrollbar Handle (active): #ffbce4
+Modern Scrollbar Handle (inactive): #ffaadd66
+Modern Scrollbar Background (active): #ffd1ed24
+Progress bar: #ffbbe4
+Progress background: #b198a755
+
+// Piano roll and note colors
+Piano Roll Black Key: #4f4362
+Piano Roll White Key: #d2c8dd
+Note FX Chain 1: #ffc8e9
+Note FX Chain 2: #b8e4ff
+Note FX Chain 3: #c8f7dc
+Note FX Chain 4: #fff0ac
+Note FX Chain 5: #ffb7cb
+Note FX Chain 6: #e3ccff
+Note FX Chain 7: #b3e2ff
+Note FX Chain 8: #ffbee5
+
+// EQ palette
+EQ Band 1: #ffc0d2
+EQ Band 2: #ffceeb
+EQ Band 3: #ffd4ee
+EQ Band 4: #fff0ad
+EQ Band 5: #c8f7dc
+EQ Band 6: #b8e4ff
+EQ Band 7: #e3ccff
+EQ Band 8: #ddd4e7
+EQ Curve Line: #faf7fd
+
+// Selection, grid and timeline
+Grid Line (Primary): #ffc9ea20
+Grid Line (Secondary): #e7ddf112
+Display Background: #534866
+Display Stroke: #ffcbea2b
+Grey Display Background: #5d507244
+Display Background (error): #925768
+Display Waveform: #eee6f7
+Display Start/End Markers: #fff1b0
+Display Loop Markers: #b5f5f1
+Drop Indicator: #ffecf7
+Popup overlay background color: #534866df
+Timeline edit tool chooser background: #6b5d82
+Timeline Tooltip Background: #83739ee8
+Timeline Tooltip Text: #faf7fd
+Timeline Header Background Pattern: #f6f1fa0a
+Timeline Header Tooltip Background: #645679e8
+Timeline Header Tooltip Text: #f0e9f7
+Timeline Header Cue Marker: #ffd3ed
+Timeline Cue Marker: #ffbce5
+Time Selection Fill: #ffcfeb50
+Time Selection Stroke: #f7f2fc
+Time Selection Standby Fill: #ffdef12b
+Time Selection Standby Stroke: #eee6f880
+Time Selection Inactive Fill: #ffdef114
+Time Selection Inactive Stroke: #eee6f824
+Time Selection Across All Lanes Fill: #b8e4ff50
+Time Selection Across All Lanes Stroke: #d2f9f7
+Time Selection Cursor Stroke: #faf7fd
+Time Selection Standby Cursor Stroke: #eee6f7
+Header Time Selection Fill: #ffcfeb66
+Header Time Selection Stroke: #f7f2fc
+Header Time Selection Standby Fill: #ffdef120
+Header Time Selection Standby Stroke: #e5dbf0
+Header Time Selection Across All Lanes Fill: #b8e4ff66
+Header Time Selection Across All Lanes Stroke: #d2f9f7
+Header Time Selection Cursor Stroke: #faf7fd
+Header Time Selection Standby Cursor Stroke: #eee6f7
+Loop Region Background: #ffd3ed2b
+Loop Region Fill: #a78a9c
+Loop Region Stroke: #ffd2ed
+Loop Region Selected Fill: #bc98ad
+Loop Region Selected Stroke: #f7f3fc
+
+// Clips, waveforms and automation
+Audio Event Boundary: #ffd2ed7b
+Audio Event Background: #726389
+Audio Event Waveform: #e6ddf0
+Clip Content Automation Stroke Color: #b8e4ff
+Clip Content Automation Fill Color: #b8e4ff24
+Arranger Automation Curve Fill Color: #ffcbea20
+Automation Color: #ffd1ed
+User Automation Override Color: #cff8e0
+Track Automation Button Color: #b8e4ff
+Clip Automation Button Color: #ffc0e5
+Note Expression Color: #b8e4ff
+Clip Expression Background Color: #83749b
+Comp fill: #e3ccff5c
+Dark offset for automation/channel bar: #3f2f5855
+Light offset for automation/channel bar: #f6f1fa44
+
+// Knobs, LEDs and meters
+Knob Body: #00000000
+Knob Body Lighter: #dad0e6
+Knob Body Lightest: #efeaf6
+Knob Body Darkest: #5d5072
+Knob Line: #f6f1fa
+Knob Line Dark: #4f4165
+Knob Stroke: #534569
+Knob Emboss Highlight: #ffffff35
+Knob Emboss Shadow: #3e2e5633
+Knob Value Color: #ffcdea
+Led On: #ffcdea
+Led Off: #9185a3
+Meter Normal: #ccf8df
+Meter Yellow: #fff1b0
+Meter Red: #ffb3c8
+Meter Gain Reduction: #e3ccff
+Meter Hitech: #b8e4ff
+Meter Hitech Background: #b8e4ff1c
+Meter Clipping: #ffb3c8
+Meter Muted: #c6bcd2
+Number field bar background: #ffc0e5
+Onset Color Min: #ffd0ec
+Onset Color Max: #faf7fd
+Beat Marker Color: #ffc0e5
+Analyzed Beat Color: #b8e4ff
+
+// Browser and tree selection
+Dark tree background (selected): #9c778d
+Dark tree background (standby selected): #736090
+Dark tree separator: #ff92d4
+Dark tree text: #f7f3fb
+Dark tree text (selected): #fcfafe
+Dark tree hover background change: #f6f1fa14
+Selected Tree Item Background: #ffc0e52b
+Selected Tree Item Background (standby): #ffc0e518
+Tree Item Background: #6d6082
+List Item Background: #6d6082
+List Separator: #9286a4
+Tree Separator: #00000000
+
+// Color labels and modulation
+Mapping indication 1: #ffc0d2
+Mapping indication 2: #ffd2b8
+Mapping indication 3: #fff1b0
+Mapping indication 4: #dcf8bc
+Mapping indication 5: #c4f6d9
+Mapping indication 6: #b8e4ff
+Mapping indication 7: #e3ccff
+Mapping indication 8: #ffcbea
+Panel Red: #ffc0d2
+Panel Orange: #ffd2b8
+Panel Yellow: #fff1b0
+Panel Lime: #ffefa4
+Panel Green: #dcf8bc
+Panel Mint: #c4f6d9
+Panel Turquoise: #b8f5f2
+Panel Blue: #b8e4ff
+Panel Purple: #e3ccff
+Launcher Mapping Indication: #ffcbea
+Modulation Mapping Color: #b8e4ff
+Modulation Mapping Color (subtractive): #9bd9ff
+Modulation Mapping Color (polyphonic): #c4f6d9
+Modulation Mapping Background (polyphonic): #c4f6d932
+Modulation Mapping Background (monophonic): #b8e4ff32
+Add Modulation Button Color: #ffcbea
+Multiply Modulation Button Color: #e3ccff
+Send (post) value color: #fff1b0
+Send (pre) value color: #b8f5f2
+
+// Device surfaces
+Device Header: #726389
+Device Header (selected): #9b8291
+Device Tint Future: #b8e4ff30
+Device Tint Retro: #ffcbea28
+Device Tint Military: #c4f6d91c
+Device Locked Overlay: #b8e4ff50
+Abstract Button Stroke: #ff92d4
+Abstract Button Selected Background: #9c7c8f
+Abstract Button Unselected Background: #645679
+Abstract Button Pressed Background: #af879f
+The Grid (background): #534866
+The Grid (stroke): #9185a5
+Background color of the modular environment.: #534866
+
+// Status colors
+Notification Background: #efeaf6
+Notification Normal: #86b1ae
+Notification Error: #ff93b1
+Warning: #ffb3c8
+Error Text: #ffc8d8
+Record button color: #ffaac2
+Record text color: #ffc8d8
+Record button color implicit: #c58497
+Record button glow color: #ffaac240
+Monitoring buttons color: #fff1b0
+Activation Green: #c4f6d9
+Activation Yellow: #fff1b0
+Activation Red: #ffaac1
+Plugin missing: #ffb3c8
+Missing file icon: #ffb3c8
+External file icon: #fff1b0
+External file text: #fff1b0
+Found file text: #fff1b0
+Notification Button Background: #7b6c94
+Popup Notification Background: #534866dd

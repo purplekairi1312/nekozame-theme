@@ -1,0 +1,58 @@
+# nekozame for starship. generated from palette.toml by generate.py; edit the palette there.
+# Two lines for a clean, spacious aesthetic
+add_newline = true
+
+# The Left Prompt: Cute icons, no boring OS logos
+format = """
+$username$hostname$directory$git_branch$git_status$cmd_duration
+$character"""
+
+# The Right Prompt: Moon clock
+right_format = """$time"""
+
+[username]
+show_always = true
+style_user = "bold {{orchid}}" # Pastel Pink
+style_root = "bold {{error}}" # Hot Pink for root
+# A little ribbon for your username
+format = '[🎀 $user]($style) '
+
+[hostname]
+ssh_only = false
+# Soft lavender for your machine
+format = 'at [🏰 $hostname](bold {{violet}}) '
+
+[directory]
+style = "bold {{pink}}" # Soft pinkish-purple
+read_only = " 🔒"
+# Cherry blossom for the folder
+format = "in [🌸 $path]($style)[$read_only]($read_only_style) "
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+# A magic wand for your git branches!
+symbol = "🪄 "
+style = "bold {{rose}}"
+format = "with [$symbol$branch]($style) "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold {{butter}}" # Soft star yellow
+
+[time]
+disabled = false
+time_format = "%I:%M %p" # 12-hour clock looks softer
+style = "bold {{link}}" # Rosewater pink
+# Crescent moon for the time
+format = '🌙 [$time]($style)'
+
+[cmd_duration]
+min_time = 2000
+# Add a sparkle when a command finishes
+format = "took [$duration](bold {{peach}}) ✨ "
+
+[character]
+# Sparkling heart when successful, broken heart if a command fails
+success_symbol = "[╰─💖❯]({{orchid}})"
+error_symbol = "[╰─💔❯](bold {{error}})"

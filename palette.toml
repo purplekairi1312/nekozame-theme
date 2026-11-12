@@ -1,0 +1,38 @@
+# nekozame: every color, once. generate.py builds all the app themes from this.
+
+[surface]
+bg        = "#5a4f6e"  # background
+panel     = "#4f4562"  # sidebars, popups, title bars
+deep      = "#433a55"  # deepest: borders, terminal black, text on pink
+raised    = "#685c7f"  # raised elements, inactive tabs
+selection = "#8a76a8"
+region    = "#7c6a9a"  # editor selection / region
+linenum   = "#a094b8"
+dim       = "#b3a7cb"  # disabled, inactive text
+
+[text]
+fg        = "#ffffff"
+pinktext  = "#ffd9ef"  # pink-tinted text (ghostty)
+muted     = "#e8def5"
+comment   = "#d8cdec"
+lavender  = "#f1e6ff"
+
+[accent]
+orchid    = "#ffc0e5"  # the main accent: cursor, focus, titles
+pink      = "#ffd4ee"
+rose      = "#ffc0d2"
+link      = "#ffc6ea"
+error     = "#ffb3c8"
+border    = "#ffd1ec"
+violet    = "#e3ccff"  # lilac
+blue      = "#b8e4ff"  # baby blue
+cyan      = "#b8f5f2"
+mint      = "#c8f7dc"
+green     = "#dcf8bc"
+butter    = "#fff1b0"  # lemon
+peach     = "#ffd2b8"
+
+[ansi]
+# black red green yellow blue magenta cyan white, then the bright ones
+normal = ["#433a55", "#ffb3c8", "#dcf8bc", "#fff1b0", "#b8e4ff", "#ffc0e5", "#b8f5f2", "#ffd4ee"]
+bright = ["#d9b8d6", "#ffcadb", "#c8f7dc", "#fff7cf", "#d6efff", "#ffd4ee", "#d6fbf8", "#ffe6f4"]

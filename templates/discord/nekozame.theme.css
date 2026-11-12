@@ -1,0 +1,53 @@
+/**
+ * @name nekozame
+ * @author purplekairi1312
+ * @description Soft lavender with pastel pink, baby blue, mint, lemon and lilac.
+ * @version 1.0.0
+ */
+.theme-dark, .theme-darker, .theme-midnight, .visual-refresh {
+  --background-primary: {{bg}};
+  --background-secondary: {{panel}};
+  --background-secondary-alt: {{deep}};
+  --background-tertiary: {{deep}};
+  --background-accent: {{selection}};
+  --background-floating: {{panel}};
+  --background-mobile-primary: {{bg}};
+  --background-mobile-secondary: {{panel}};
+  --background-modifier-hover: rgba(255, 192, 229, 0.10);
+  --background-modifier-active: rgba(255, 192, 229, 0.16);
+  --background-modifier-selected: rgba(255, 192, 229, 0.22);
+  --background-modifier-accent: rgba(255, 209, 236, 0.18);
+  --background-base-lowest: {{deep}};
+  --background-base-lower: {{panel}};
+  --background-base-low: {{panel}};
+  --background-surface-high: {{bg}};
+  --background-surface-higher: {{raised}};
+  --background-surface-highest: {{raised}};
+  --chat-background-default: {{bg}};
+  --channeltextarea-background: {{raised}};
+  --input-background: {{raised}};
+  --modal-background: {{panel}};
+  --header-primary: {{fg}};
+  --header-secondary: {{muted}};
+  --text-normal: {{fg}};
+  --text-default: {{fg}};
+  --text-muted: {{comment}};
+  --text-link: {{link}};
+  --text-positive: {{mint}};
+  --text-warning: {{butter}};
+  --text-danger: {{error}};
+  --text-brand: {{orchid}};
+  --interactive-normal: {{muted}};
+  --interactive-hover: {{pink}};
+  --interactive-active: {{fg}};
+  --interactive-muted: {{dim}};
+  --channels-default: {{comment}};
+  --brand-500: {{orchid}};
+  --brand-560: {{pink}};
+  --brand-experiment: {{orchid}};
+  --mention-background: rgba(255, 192, 229, 0.16);
+  --mention-foreground: {{pink}};
+  --scrollbar-thin-thumb: {{selection}};
+  --scrollbar-auto-thumb: {{selection}};
+  --scrollbar-auto-track: {{deep}};
+}
