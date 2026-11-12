@@ -17,6 +17,7 @@ Soft violet-gray with pastel pink, baby blue, mint, lemon and lilac. The theme o
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/pinktext.png" width="20" height="20" alt=""> | Sweet Sachet | `#ffd9ef` | pink text (terminals) |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/muted.png" width="20" height="20" alt=""> | Lingering Lilac | `#e8def5` | secondary text |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/comment.png" width="20" height="20" alt=""> | Italian Fitch | `#d8cdec` | code comments |
+| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/softwhite.png" width="20" height="20" alt=""> | Cold Snow | `#fff4fa` | page text in browsers |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/lavender.png" width="20" height="20" alt=""> | Minute Mauve | `#f1e6ff` | operators, variables |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/orchid.png" width="20" height="20" alt=""> | Pretty in Pink | `#ffc0e5` | main accent: cursor, focus, titles |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/pink.png" width="20" height="20" alt=""> | Little Smile | `#ffd4ee` | soft accent, headings |
@@ -51,6 +52,7 @@ Everything is in [`themes/`](themes).
 | Zen Browser | `zen/userChrome.css` | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
 | DankMaterialShell | `dms/nekozame.json` | Settings → Theme & Colors → Custom, or `"currentThemeName": "custom"` and `"customThemeFile"` in `~/.config/dms/settings.json` |
 | Discord | `discord/nekozame.theme.css` | Vencord's themes folder |
+| Dark Reader | `darkreader/nekozame.json` | Dark Reader → Settings → Advanced → Import Settings |
 | Bitwig Studio | `bitwig/nekozame_bitwig_6.1.4.bte` | load it with the [Bitwig Theme Editor](https://github.com/Berikai/bitwig-theme-editor) |
 | Krita, GIMP, Aseprite | `palettes/nekozame.gpl` | the app's palettes folder |
 
