@@ -48,6 +48,7 @@ Everything is in [`themes/`](themes).
 | Konsole | `konsole/nekozame.colorscheme` | `~/.local/share/konsole/` |
 | VS Code | `vscode/` | copy the folder to `~/.vscode/extensions/purplekairi1312.nekozame-1.0.0` |
 | btop | `btop/nekozame.theme` | `~/.config/btop/themes/`, then `color_theme = "nekozame"` |
+| cava | `cava/config` | `~/.config/cava/config`, or `cava -p` it |
 | Starship | `starship/starship.toml` | `~/.config/starship.toml` (a full prompt config) |
 | Zen Browser | `zen/userChrome.css` | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
 | DankMaterialShell | `dms/nekozame.json` | Settings → Theme & Colors → Custom, or `"currentThemeName": "custom"` and `"customThemeFile"` in `~/.config/dms/settings.json` |
