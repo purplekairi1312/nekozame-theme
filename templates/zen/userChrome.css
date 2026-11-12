@@ -11,18 +11,18 @@
   --zen-dialog-background: {{panel}} !important;
 
   --toolbar-bgcolor: {{panel}} !important;
-  --toolbar-color: #fff4fa !important;
+  --toolbar-color: {{softwhite}} !important;
   --toolbar-field-background-color: {{bg}} !important;
-  --toolbar-field-color: #fff4fa !important;
+  --toolbar-field-color: {{softwhite}} !important;
   --toolbar-field-focus-background-color: {{raised}} !important;
   --toolbar-field-focus-border-color: {{orchid}} !important;
   --urlbar-box-bgcolor: {{bg}} !important;
   --tab-selected-bgcolor: {{raised}} !important;
   --tab-selected-textcolor: {{fg}} !important;
   --lwt-accent-color: {{deep}} !important;
-  --lwt-text-color: #fff4fa !important;
+  --lwt-text-color: {{softwhite}} !important;
   --arrowpanel-background: {{panel}} !important;
-  --arrowpanel-color: #fff4fa !important;
+  --arrowpanel-color: {{softwhite}} !important;
   --arrowpanel-border-color: {{selection}} !important;
   --focus-outline-color: {{orchid}} !important;
   --button-primary-bgcolor: {{orchid}} !important;
@@ -30,7 +30,7 @@
   --button-primary-hover-bgcolor: {{pink}} !important;
   --link-color: {{link}} !important;
   --sidebar-background-color: {{panel}} !important;
-  --sidebar-text-color: #fff4fa !important;
+  --sidebar-text-color: {{softwhite}} !important;
 }
 
 ::selection {

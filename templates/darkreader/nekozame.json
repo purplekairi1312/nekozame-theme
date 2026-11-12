@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "theme": {
+    "mode": 1,
+    "brightness": 100,
+    "contrast": 100,
+    "grayscale": 0,
+    "sepia": 0,
+    "darkSchemeBackgroundColor": "{{bg}}",
+    "darkSchemeTextColor": "{{softwhite}}",
+    "lightSchemeBackgroundColor": "{{softwhite}}",
+    "lightSchemeTextColor": "{{deep}}",
+    "scrollbarColor": "{{selection}}",
+    "selectionColor": "{{orchid}}",
+    "styleSystemControls": true
+  }
+}

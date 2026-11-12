@@ -17,6 +17,7 @@ fg = { hex = "#ffffff", name = "White", use = "text" }
 pinktext = { hex = "#ffd9ef", name = "Sweet Sachet", use = "pink text (terminals)" }
 muted = { hex = "#e8def5", name = "Lingering Lilac", use = "secondary text" }
 comment = { hex = "#d8cdec", name = "Italian Fitch", use = "code comments" }
+softwhite = { hex = "#fff4fa", name = "Cold Snow", use = "page text in browsers" }
 lavender = { hex = "#f1e6ff", name = "Minute Mauve", use = "operators, variables" }
 
 [accent]
