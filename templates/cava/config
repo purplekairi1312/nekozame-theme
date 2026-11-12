@@ -1,0 +1,10 @@
+; nekozame for cava. generated from palette.toml by generate.py; edit the palette there.
+; use it as ~/.config/cava/config, or: cava -p this-file
+[color]
+; bars rise from blue through violet into pink
+gradient = 1
+gradient_count = 4
+gradient_color_1 = '{{blue}}'
+gradient_color_2 = '{{violet}}'
+gradient_color_3 = '{{orchid}}'
+gradient_color_4 = '{{pink}}'
