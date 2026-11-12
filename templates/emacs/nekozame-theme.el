@@ -2,7 +2,7 @@
 ;;
 ;; Author: purplekairi1312
 ;;
-;; soft lavender with pastel pink, baby blue, mint, lemon and lilac.
+;; soft violet-gray with pastel pink, baby blue, mint, lemon and lilac.
 ;; generated from palette.toml by generate.py; edit the palette there.
 ;;
 ;;; Code:
@@ -25,7 +25,7 @@ Can be an integer to determine the exact padding."
   :type '(choice integer boolean))
 
 (def-doom-theme nekozame
-  "Soft lavender with pastel pink, baby blue, mint, lemon and lilac."
+  "Soft violet-gray with pastel pink, baby blue, mint, lemon and lilac."
 
   ;; name        default    256        16
   ((bg         '("{{bg}}" "#3a3a3a" "black"))

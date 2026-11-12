@@ -1,36 +1,38 @@
 # nekozame: every color, once. generate.py builds all the app themes from this.
+# name: the color's real name (name-colors.py looks it up from the hex).
+# use: what it's for. both show up in the readme.
 
 [surface]
-bg        = "#5a4f6e"  # background
-panel     = "#4f4562"  # sidebars, popups, title bars
-deep      = "#433a55"  # deepest: borders, terminal black, text on pink
-raised    = "#685c7f"  # raised elements, inactive tabs
-selection = "#8a76a8"
-region    = "#7c6a9a"  # editor selection / region
-linenum   = "#a094b8"
-dim       = "#b3a7cb"  # disabled, inactive text
+bg = { hex = "#5a4f6e", name = "Crowning", use = "background" }
+panel = { hex = "#4f4562", name = "Roman Purple", use = "sidebars, popups, title bars" }
+deep = { hex = "#433a55", name = "Purple Velvet", use = "borders, terminal black, text on pink" }
+raised = { hex = "#685c7f", name = "Napa Winery", use = "raised elements, inactive tabs" }
+selection = { hex = "#8a76a8", name = "Grape Parfait", use = "selected items" }
+region = { hex = "#7c6a9a", name = "Queen’s", use = "selected text in editors" }
+linenum = { hex = "#a094b8", name = "Lush Mauve", use = "line numbers" }
+dim = { hex = "#b3a7cb", name = "Wisteria-Wise", use = "disabled and inactive text" }
 
 [text]
-fg        = "#ffffff"
-pinktext  = "#ffd9ef"  # pink-tinted text (ghostty)
-muted     = "#e8def5"
-comment   = "#d8cdec"
-lavender  = "#f1e6ff"
+fg = { hex = "#ffffff", name = "White", use = "text" }
+pinktext = { hex = "#ffd9ef", name = "Sweet Sachet", use = "pink text (terminals)" }
+muted = { hex = "#e8def5", name = "Lingering Lilac", use = "secondary text" }
+comment = { hex = "#d8cdec", name = "Italian Fitch", use = "code comments" }
+lavender = { hex = "#f1e6ff", name = "Minute Mauve", use = "operators, variables" }
 
 [accent]
-orchid    = "#ffc0e5"  # the main accent: cursor, focus, titles
-pink      = "#ffd4ee"
-rose      = "#ffc0d2"
-link      = "#ffc6ea"
-error     = "#ffb3c8"
-border    = "#ffd1ec"
-violet    = "#e3ccff"  # lilac
-blue      = "#b8e4ff"  # baby blue
-cyan      = "#b8f5f2"
-mint      = "#c8f7dc"
-green     = "#dcf8bc"
-butter    = "#fff1b0"  # lemon
-peach     = "#ffd2b8"
+orchid = { hex = "#ffc0e5", name = "Pretty in Pink", use = "main accent: cursor, focus, titles" }
+pink = { hex = "#ffd4ee", name = "Little Smile", use = "soft accent, headings" }
+rose = { hex = "#ffc0d2", name = "Garden Glory", use = "warm accent" }
+link = { hex = "#ffc6ea", name = "Rosy Maple Moth", use = "links" }
+error = { hex = "#ffb3c8", name = "Baby Pink", use = "errors" }
+border = { hex = "#ffd1ec", name = "Classic Rose", use = "focused borders, dividers" }
+violet = { hex = "#e3ccff", name = "Lens Flare Pink", use = "keywords" }
+blue = { hex = "#b8e4ff", name = "Arctic Paradise", use = "functions, info" }
+cyan = { hex = "#b8f5f2", name = "Ice Citadel", use = "types, special" }
+mint = { hex = "#c8f7dc", name = "Out of Blue", use = "strings, success" }
+green = { hex = "#dcf8bc", name = "Chicon", use = "additions" }
+butter = { hex = "#fff1b0", name = "Thunderbolt", use = "warnings, numbers" }
+peach = { hex = "#ffd2b8", name = "Peachy Bon-Bon", use = "constants" }
 
 [ansi]
 # black red green yellow blue magenta cyan white, then the bright ones

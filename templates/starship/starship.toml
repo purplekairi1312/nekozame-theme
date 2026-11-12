@@ -19,7 +19,7 @@ format = '[🎀 $user]($style) '
 
 [hostname]
 ssh_only = false
-# Soft lavender for your machine
+# Soft violet-gray for your machine
 format = 'at [🏰 $hostname](bold {{violet}}) '
 
 [directory]
