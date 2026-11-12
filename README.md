@@ -1,6 +1,6 @@
 # nekozame-theme
 
-Soft lavender with pastel pink, baby blue, mint, lemon and lilac. The theme of [nekozame os](https://github.com/purplekairi1312/nekozame-os), by purplekairi1312.
+Soft lavender with pastel pink, baby blue, mint, lemon and lilac. The theme of [nekozame os](https://github.com/purplekairi1312/nekozame-os).
 
 | | | | |
 |---|---|---|---|
@@ -34,4 +34,4 @@ Edit [`palette.toml`](palette.toml), then run `./generate.py`. Every theme in `t
 
 ## License
 
-[CC BY-NC-SA 4.0](LICENSE), by purplekairi1312.
+[CC BY-NC-SA 4.0](LICENSE).
