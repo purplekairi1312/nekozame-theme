@@ -7,7 +7,7 @@
     "contrast": 100,
     "grayscale": 0,
     "sepia": 0,
-    "darkSchemeBackgroundColor": "{{bg}}",
+    "darkSchemeBackgroundColor": "{{page}}",
     "darkSchemeTextColor": "{{softwhite}}",
     "lightSchemeBackgroundColor": "{{softwhite}}",
     "lightSchemeTextColor": "{{deep}}",

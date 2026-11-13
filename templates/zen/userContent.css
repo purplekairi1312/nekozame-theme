@@ -3,11 +3,13 @@
    are links keep their own look. generated from palette.toml by generate.py.
    goes in your profile's chrome/ folder, next to userChrome.css */
 a:link:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
-    color: {{link}} !important;
+    color: {{orchid}} !important;
+    text-decoration-color: {{orchid}} !important;
 }
 a:visited:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
     color: {{violet}} !important;
+    text-decoration-color: {{violet}} !important;
 }
 a:hover:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
-    color: {{orchid}} !important;
+    color: {{pink}} !important;
 }
