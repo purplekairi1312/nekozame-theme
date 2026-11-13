@@ -1,16 +1,18 @@
 /* nekozame for zen browser. generated from palette.toml by generate.py; edit the palette there.
-   Soft violet-gray with pastel pink, baby blue and lilac. Applies after a restart. */
+   Soft violet-gray with pastel pink, baby blue and lilac. Applies after a restart.
+   the toolbars and sidebar are see-through, so the wallpaper shows (with zen's
+   transparency on: browser.tabs.allow_transparent_browser). */
 :root {
   --zen-primary-color: {{orchid}} !important;
   --zen-colors-primary: {{raised}} !important;
   --zen-colors-secondary: {{panel}} !important;
   --zen-colors-tertiary: {{deep}} !important;
   --zen-colors-border: {{selection}} !important;
-  --zen-main-browser-background: {{panel}} !important;
-  --zen-themed-toolbar-bg: {{panel}} !important;
+  --zen-main-browser-background: color-mix(in srgb, {{panel}} 55%, transparent) !important;
+  --zen-themed-toolbar-bg: color-mix(in srgb, {{panel}} 55%, transparent) !important;
   --zen-dialog-background: {{panel}} !important;
 
-  --toolbar-bgcolor: {{panel}} !important;
+  --toolbar-bgcolor: color-mix(in srgb, {{panel}} 55%, transparent) !important;
   --toolbar-color: {{softwhite}} !important;
   --toolbar-field-background-color: {{bg}} !important;
   --toolbar-field-color: {{softwhite}} !important;
@@ -29,7 +31,7 @@
   --button-primary-color: {{deep}} !important;
   --button-primary-hover-bgcolor: {{pink}} !important;
   --link-color: {{link}} !important;
-  --sidebar-background-color: {{panel}} !important;
+  --sidebar-background-color: color-mix(in srgb, {{panel}} 55%, transparent) !important;
   --sidebar-text-color: {{softwhite}} !important;
 }
 
