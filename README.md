@@ -51,7 +51,7 @@ Everything is in [`themes/`](themes).
 | cava | `cava/config` | `~/.config/cava/config`, or `cava -p` it |
 | tmux | `tmux/nekozame.conf` | `source-file` it from your tmux.conf |
 | Starship | `starship/starship.toml` | `~/.config/starship.toml` (a full prompt config) |
-| Zen Browser | `zen/userChrome.css`, `zen/userContent.css` (links on pages Dark Reader darkens, GitHub in nekozame) | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
+| Zen Browser | `zen/userChrome.css`, `zen/userContent.css` (links on pages Dark Reader darkens, GitHub and YouTube in nekozame) | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
 | DankMaterialShell | `dms/nekozame.json` | Settings → Theme & Colors → Custom, or `"currentThemeName": "custom"` and `"customThemeFile"` in `~/.config/dms/settings.json` |
 | Discord | `discord/nekozame.theme.css` | Vencord's themes folder |
 | Dark Reader | `darkreader/nekozame.json` (off on GitHub and YouTube, which have their own) | Dark Reader → Settings → Advanced → Import Settings |
@@ -61,7 +61,7 @@ Everything is in [`themes/`](themes).
 
 ## Changing colors
 
-Edit [`palette.toml`](palette.toml), run `./name-colors.py` if you changed a hex (it names the color), then `./generate.py`. Every theme in `themes/` is rebuilt from [`templates/`](templates), so they all stay the same. Bitwig's file is the exception: its shades are tuned by hand. GitHub's colors come from GitHub's own dark theme: `./github-colors.py` maps them again when GitHub adds new ones.
+Edit [`palette.toml`](palette.toml), run `./name-colors.py` if you changed a hex (it names the color), then `./generate.py`. Every theme in `themes/` is rebuilt from [`templates/`](templates), so they all stay the same. Bitwig's file is the exception: its shades are tuned by hand. GitHub's and YouTube's colors come from their own dark themes: `./web-colors.py` maps them again when they change.
 
 ## License
 

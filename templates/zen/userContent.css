@@ -33,7 +33,7 @@
 
 /* github: dark reader stays off there (see the dark reader settings). github's
    own colours become nekozame's instead, outlines and buttons darker than the
-   page. written by github-colors.py from github's dark theme */
+   page. written by web-colors.py from github's dark theme */
 /* github */
 @-moz-document domain("github.com") {
     :root, [data-color-mode] {
@@ -92,7 +92,7 @@
         --borderColor-danger-emphasis: {{error}} !important;
         --borderColor-danger-muted: color-mix(in srgb, {{error}} 40%, transparent) !important;
         --borderColor-default: {{deep}} !important;
-        --borderColor-disabled: color-mix(in srgb, {{deep}} 10%, transparent) !important;
+        --borderColor-disabled: {{deep}} !important;
         --borderColor-done-emphasis: {{violet}} !important;
         --borderColor-done-muted: color-mix(in srgb, {{violet}} 40%, transparent) !important;
         --borderColor-emphasis: {{deep}} !important;
@@ -106,7 +106,7 @@
         --button-inactive-bgColor: {{region}} !important;
         --button-inactive-fgColor: color-mix(in srgb, {{comment}} 17%, {{dim}}) !important;
         --button-outline-bgColor-active: color-mix(in srgb, {{blue}} 35%, {{bg}}) !important;
-        --button-outline-bgColor-rest: {{pinktext}} !important;
+        --button-outline-bgColor-rest: {{deep}} !important;
         --button-outline-fgColor-disabled: color-mix(in srgb, {{blue}} 50%, transparent) !important;
         --button-outline-fgColor-hover: {{blue}} !important;
         --button-outline-fgColor-rest: {{blue}} !important;
@@ -121,7 +121,7 @@
         --buttonCounter-primary-bgColor-rest: color-mix(in srgb, color-mix(in srgb, {{mint}} 35%, {{bg}}) 20%, transparent) !important;
         --buttonKeybindingHint-danger-bgColor-active: color-mix(in srgb, {{deep}} 40%, transparent) !important;
         --buttonKeybindingHint-danger-bgColor-hover: color-mix(in srgb, {{deep}} 20%, transparent) !important;
-        --buttonKeybindingHint-danger-borderColor-hover: color-mix(in srgb, {{deep}} 10%, transparent) !important;
+        --buttonKeybindingHint-danger-borderColor-hover: {{deep}} !important;
         --buttonKeybindingHint-default-bgColor-rest: color-mix(in srgb, {{selection}} 17%, {{region}}) !important;
         --buttonKeybindingHint-inactive-bgColor: color-mix(in srgb, {{selection}} 17%, {{region}}) !important;
         --codeMirror-syntax-fgColor-comment: {{linenum}} !important;
@@ -137,7 +137,7 @@
         --contribution-default-bgColor-2: color-mix(in srgb, {{mint}} 35%, {{bg}}) !important;
         --contribution-default-bgColor-3: {{mint}} !important;
         --contribution-default-bgColor-4: {{mint}} !important;
-        --contribution-default-borderColor-0: color-mix(in srgb, {{deep}} 5%, transparent) !important;
+        --contribution-default-borderColor-0: {{deep}} !important;
         --contribution-halloween-bgColor-1: {{peach}} !important;
         --contribution-halloween-bgColor-2: {{peach}} !important;
         --contribution-halloween-bgColor-3: color-mix(in srgb, {{peach}} 35%, {{bg}}) !important;
@@ -649,28 +649,38 @@
         --skeletonLoader-bgColor: color-mix(in srgb, {{linenum}} 20%, transparent) !important;
         --timelineBadge-bgColor: color-mix(in srgb, {{region}} 65%, {{raised}}) !important;
         --underlineNav-borderColor-active: {{orchid}} !important;
+        --ansi-whiteBright: {{pinktext}} !important;
         --avatar-bgColor: color-mix(in srgb, {{pinktext}} 10%, transparent) !important;
         --bgColor-black: {{deep}} !important;
         --bgColor-inset: {{deep}} !important;
-        --borderColor-muted: color-mix(in srgb, {{deep}} 70%, transparent) !important;
-        --borderColor-translucent: color-mix(in srgb, {{deep}} 15%, transparent) !important;
+        --bgColor-inverse: {{pinktext}} !important;
+        --bgColor-white: {{pinktext}} !important;
+        --borderColor-muted: {{deep}} !important;
+        --borderColor-translucent: {{deep}} !important;
+        --button-danger-fgColor-active: {{pinktext}} !important;
         --button-danger-fgColor-disabled: color-mix(in srgb, {{error}} 50%, transparent) !important;
+        --button-danger-fgColor-hover: {{pinktext}} !important;
+        --button-danger-iconColor-hover: {{pinktext}} !important;
         --button-default-bgColor-active: {{deep}} !important;
         --button-default-bgColor-hover: {{deep}} !important;
         --button-default-bgColor-rest: {{panel}} !important;
         --button-default-bgColor-selected: {{deep}} !important;
+        --button-outline-fgColor-active: {{deep}} !important;
         --button-primary-bgColor-rest: {{orchid}} !important;
         --buttonCounter-danger-bgColor-disabled: color-mix(in srgb, {{error}} 5%, transparent) !important;
         --buttonCounter-danger-fgColor-disabled: color-mix(in srgb, {{error}} 50%, transparent) !important;
+        --buttonCounter-danger-fgColor-hover: {{pinktext}} !important;
         --buttonCounter-outline-bgColor-disabled: color-mix(in srgb, {{blue}} 5%, transparent) !important;
         --buttonKeybindingHint-primary-bgColor-disabled: color-mix(in srgb, color-mix(in srgb, {{mint}} 35%, {{bg}}) 10%, transparent) !important;
         --buttonKeybindingHint-primary-borderColor-rest: color-mix(in srgb, color-mix(in srgb, {{mint}} 35%, {{bg}}) 10%, transparent) !important;
         --control-checked-fgColor-disabled: {{deep}} !important;
         --control-danger-bgColor-active: color-mix(in srgb, {{error}} 40%, transparent) !important;
+        --controlKnob-bgColor-checked: {{pinktext}} !important;
         --controlTrack-bgColor-rest: {{deep}} !important;
         --fgColor-black: {{deep}} !important;
         --fgColor-onEmphasis: {{deep}} !important;
         --fgColor-onInverse: {{deep}} !important;
+        --fgColor-white: {{pinktext}} !important;
         --header-fgColor-default: color-mix(in srgb, {{pinktext}} 70%, transparent) !important;
         --overlay-bgColor: {{panel}} !important;
         --selection-bgColor: color-mix(in srgb, {{blue}} 70%, transparent) !important;
@@ -681,4 +691,150 @@
 }
 /* /github */
 
-/* youtube: themed by improvedtube's custom theme (improvedtube.json), not here */
+/* youtube: dark reader stays off there too. improvedtube's custom theme
+   (improvedtube/nekozame.json) colours the page and top bar, but youtube's
+   newer colours (text, icons, cards) it doesn't reach, so they're here,
+   written by web-colors.py from youtube's dark theme */
+/* youtube */
+@-moz-document domain("youtube.com") {
+    html, [dark], [light] {
+        color-scheme: dark !important;
+        --yt-sys-color-baseline--add-on-blue-base-background: color-mix(in srgb, {{blue}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-blue-primary: {{blue}} !important;
+        --yt-sys-color-baseline--add-on-blue-text-primary: {{blue}} !important;
+        --yt-sys-color-baseline--add-on-green-base-background: color-mix(in srgb, {{green}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-green-primary: color-mix(in srgb, {{green}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-green-text-primary: {{butter}} !important;
+        --yt-sys-color-baseline--add-on-magenta-base-background: color-mix(in srgb, {{orchid}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-magenta-primary: {{orchid}} !important;
+        --yt-sys-color-baseline--add-on-magenta-text-primary: {{orchid}} !important;
+        --yt-sys-color-baseline--add-on-orange-base-background: color-mix(in srgb, {{error}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-orange-primary: {{peach}} !important;
+        --yt-sys-color-baseline--add-on-orange-text-primary: {{peach}} !important;
+        --yt-sys-color-baseline--add-on-purple-base-background: color-mix(in srgb, {{violet}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-purple-primary: {{violet}} !important;
+        --yt-sys-color-baseline--add-on-purple-text-primary: {{violet}} !important;
+        --yt-sys-color-baseline--add-on-red-base-background: color-mix(in srgb, {{error}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-red-primary: {{error}} !important;
+        --yt-sys-color-baseline--add-on-red-text-primary: {{error}} !important;
+        --yt-sys-color-baseline--add-on-teal-base-background: color-mix(in srgb, {{mint}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-teal-primary: color-mix(in srgb, {{mint}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--add-on-teal-text-primary: {{mint}} !important;
+        --yt-sys-color-baseline--additive-background: color-mix(in srgb, {{pinktext}} 10%, transparent) !important;
+        --yt-sys-color-baseline--additive-background-inverse: color-mix(in srgb, {{deep}} 5%, transparent) !important;
+        --yt-sys-color-baseline--background-complete: color-mix(in srgb, color-mix(in srgb, {{mint}} 35%, {{bg}}) 60%, transparent) !important;
+        --yt-sys-color-baseline--background-warning: color-mix(in srgb, color-mix(in srgb, {{peach}} 35%, {{bg}}) 60%, transparent) !important;
+        --yt-sys-color-baseline--base-background: {{bg}} !important;
+        --yt-sys-color-baseline--blue-1: color-mix(in srgb, {{blue}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--blue-2: {{blue}} !important;
+        --yt-sys-color-baseline--blue-3: {{blue}} !important;
+        --yt-sys-color-baseline--blue-4: {{blue}} !important;
+        --yt-sys-color-baseline--blue-5: {{blue}} !important;
+        --yt-sys-color-baseline--blue-6: {{blue}} !important;
+        --yt-sys-color-baseline--blue-7: {{blue}} !important;
+        --yt-sys-color-baseline--brand-red-contrast: {{orchid}} !important;
+        --yt-sys-color-baseline--button-chip-background-hover: color-mix(in srgb, {{pinktext}} 20%, transparent) !important;
+        --yt-sys-color-baseline--call-to-action: {{blue}} !important;
+        --yt-sys-color-baseline--call-to-action-hover: {{cyan}} !important;
+        --yt-sys-color-baseline--call-to-action-inverse: {{blue}} !important;
+        --yt-sys-color-baseline--error-background-red: color-mix(in srgb, {{error}} 20%, transparent) !important;
+        --yt-sys-color-baseline--error-indicator: {{error}} !important;
+        --yt-sys-color-baseline--error-indicator-inverse: color-mix(in srgb, {{error}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--feed-vibrant-gradient1: color-mix(in srgb, {{cyan}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--feed-vibrant-gradient2: color-mix(in srgb, {{orchid}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--feed-vibrant-gradient3: {{error}} !important;
+        --yt-sys-color-baseline--filled-hover-light: {{pinktext}} !important;
+        --yt-sys-color-baseline--filled-state-layer: color-mix(in srgb, {{muted}} 67%, {{comment}}) !important;
+        --yt-sys-color-baseline--filled-touch-light: {{pinktext}} !important;
+        --yt-sys-color-baseline--frost-container-heavy: color-mix(in srgb, color-mix(in srgb, {{bg}} 55%, {{panel}}) 85%, transparent) !important;
+        --yt-sys-color-baseline--frost-container-light: color-mix(in srgb, color-mix(in srgb, {{bg}} 55%, {{panel}}) 30%, transparent) !important;
+        --yt-sys-color-baseline--frost-container-medium: color-mix(in srgb, color-mix(in srgb, {{bg}} 55%, {{panel}}) 60%, transparent) !important;
+        --yt-sys-color-baseline--frost-container-semi-heavy: color-mix(in srgb, color-mix(in srgb, {{bg}} 55%, {{panel}}) 75%, transparent) !important;
+        --yt-sys-color-baseline--frosted-glass-desktop: {{bg}} !important;
+        --yt-sys-color-baseline--frosted-glass-mobile: {{bg}} !important;
+        --yt-sys-color-baseline--genai-1: color-mix(in srgb, {{cyan}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--genai-1-additive: color-mix(in srgb, color-mix(in srgb, {{cyan}} 35%, {{bg}}) 30%, transparent) !important;
+        --yt-sys-color-baseline--genai-2: color-mix(in srgb, {{orchid}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--genai-2-additive: color-mix(in srgb, color-mix(in srgb, {{orchid}} 35%, {{bg}}) 30%, transparent) !important;
+        --yt-sys-color-baseline--genai-3: color-mix(in srgb, {{orchid}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--genai-3-additive: color-mix(in srgb, color-mix(in srgb, {{orchid}} 35%, {{bg}}) 30%, transparent) !important;
+        --yt-sys-color-baseline--genai-4: {{error}} !important;
+        --yt-sys-color-baseline--genai-4-additive: color-mix(in srgb, {{error}} 30%, transparent) !important;
+        --yt-sys-color-baseline--green-6: {{butter}} !important;
+        --yt-sys-color-baseline--grey-4: color-mix(in srgb, {{muted}} 52%, {{comment}}) !important;
+        --yt-sys-color-baseline--grey-6: {{pinktext}} !important;
+        --yt-sys-color-baseline--icon-warning: {{butter}} !important;
+        --yt-sys-color-baseline--inverted-background: {{orchid}} !important;
+        --yt-sys-color-baseline--inverted-background-hover: {{pink}} !important;
+        --yt-sys-color-baseline--menu-background: {{panel}} !important;
+        --yt-sys-color-baseline--mono-filled-hover: {{pink}} !important;
+        --yt-sys-color-baseline--mono-filled-hover-inverse: color-mix(in srgb, {{region}} 55%, {{raised}}) !important;
+        --yt-sys-color-baseline--mono-tonal-hover: color-mix(in srgb, {{pinktext}} 20%, transparent) !important;
+        --yt-sys-color-baseline--mono-tonal-hover-inverse: color-mix(in srgb, {{deep}} 10%, transparent) !important;
+        --yt-sys-color-baseline--outline: {{deep}} !important;
+        --yt-sys-color-baseline--outline-inverse: {{deep}} !important;
+        --yt-sys-color-baseline--outline-inverse-opaque: {{deep}} !important;
+        --yt-sys-color-baseline--outline-opaque: {{deep}} !important;
+        --yt-sys-color-baseline--outline-rim: {{deep}} !important;
+        --yt-sys-color-baseline--outline-rim-inverse: {{deep}} !important;
+        --yt-sys-color-baseline--outline-wash: transparent !important;
+        --yt-sys-color-baseline--purple-6: {{violet}} !important;
+        --yt-sys-color-baseline--raised-background: {{panel}} !important;
+        --yt-sys-color-baseline--red-3: {{error}} !important;
+        --yt-sys-color-baseline--red-4: {{error}} !important;
+        --yt-sys-color-baseline--red-indicator: {{orchid}} !important;
+        --yt-sys-color-baseline--shadow-medium: color-mix(in srgb, {{deep}} 25%, transparent) !important;
+        --yt-sys-color-baseline--solid-background: color-mix(in srgb, {{pinktext}} 52%, {{muted}}) !important;
+        --yt-sys-color-baseline--solid-background-inverse: {{bg}} !important;
+        --yt-sys-color-baseline--solid-rim: color-mix(in srgb, {{pinktext}} 20%, transparent) !important;
+        --yt-sys-color-baseline--solid-rim-inverse: color-mix(in srgb, {{pinktext}} 20%, transparent) !important;
+        --yt-sys-color-baseline--solid-wash: color-mix(in srgb, {{pinktext}} 30%, transparent) !important;
+        --yt-sys-color-baseline--solid-wash-inverse: color-mix(in srgb, {{pinktext}} 15%, transparent) !important;
+        --yt-sys-color-baseline--state-mono-filled-hovered: color-mix(in srgb, {{deep}} 5%, transparent) !important;
+        --yt-sys-color-baseline--state-mono-filled-pressed: color-mix(in srgb, {{deep}} 10%, transparent) !important;
+        --yt-sys-color-baseline--state-mono-standard-hovered: color-mix(in srgb, {{pinktext}} 5%, transparent) !important;
+        --yt-sys-color-baseline--state-mono-standard-pressed: color-mix(in srgb, {{pinktext}} 10%, transparent) !important;
+        --yt-sys-color-baseline--state-overlay-filled-hovered: color-mix(in srgb, {{deep}} 20%, transparent) !important;
+        --yt-sys-color-baseline--state-overlay-filled-pressed: color-mix(in srgb, {{deep}} 30%, transparent) !important;
+        --yt-sys-color-baseline--state-overlay-standard-hovered: color-mix(in srgb, {{pinktext}} 5%, transparent) !important;
+        --yt-sys-color-baseline--state-overlay-standard-pressed: color-mix(in srgb, {{pinktext}} 5%, transparent) !important;
+        --yt-sys-color-baseline--status-bar: {{pinktext}} !important;
+        --yt-sys-color-baseline--suggested-action: color-mix(in srgb, {{blue}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--suggested-action-hover: color-mix(in srgb, {{linenum}} 33%, {{selection}}) !important;
+        --yt-sys-color-baseline--suggested-action-inverse: {{blue}} !important;
+        --yt-sys-color-baseline--surface-container: {{panel}} !important;
+        --yt-sys-color-baseline--system-bar: {{pinktext}} !important;
+        --yt-sys-color-baseline--text-complete: {{mint}} !important;
+        --yt-sys-color-baseline--text-disabled: {{dim}} !important;
+        --yt-sys-color-baseline--text-disabled-inverse: {{dim}} !important;
+        --yt-sys-color-baseline--text-error: {{error}} !important;
+        --yt-sys-color-baseline--text-primary: {{pinktext}} !important;
+        --yt-sys-color-baseline--text-primary-inverse: {{deep}} !important;
+        --yt-sys-color-baseline--text-secondary: {{comment}} !important;
+        --yt-sys-color-baseline--text-secondary-inverse: color-mix(in srgb, {{linenum}} 51%, {{selection}}) !important;
+        --yt-sys-color-baseline--text-warning: {{peach}} !important;
+        --yt-sys-color-baseline--themed-green: {{mint}} !important;
+        --yt-sys-color-baseline--themed-green-inverse: color-mix(in srgb, {{mint}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--themed-overlay-background: color-mix(in srgb, {{deep}} 80%, transparent) !important;
+        --yt-sys-color-baseline--tonal-background: color-mix(in srgb, {{pinktext}} 10%, transparent) !important;
+        --yt-sys-color-baseline--tonal-background-inverse: color-mix(in srgb, {{deep}} 10%, transparent) !important;
+        --yt-sys-color-baseline--tonal-hover-light: color-mix(in srgb, {{pinktext}} 15%, transparent) !important;
+        --yt-sys-color-baseline--tonal-rim: color-mix(in srgb, {{pinktext}} 10%, transparent) !important;
+        --yt-sys-color-baseline--tonal-rim-inverse: color-mix(in srgb, {{deep}} 5%, transparent) !important;
+        --yt-sys-color-baseline--tonal-state-layer: color-mix(in srgb, {{pinktext}} 10%, transparent) !important;
+        --yt-sys-color-baseline--tonal-touch-light: color-mix(in srgb, {{pinktext}} 25%, transparent) !important;
+        --yt-sys-color-baseline--tonal-wash: color-mix(in srgb, {{pinktext}} 5%, transparent) !important;
+        --yt-sys-color-baseline--tonal-wash-inverse: color-mix(in srgb, {{pinktext}} 20%, transparent) !important;
+        --yt-sys-color-baseline--touch-response: {{pinktext}} !important;
+        --yt-sys-color-baseline--touch-response-inverse: {{deep}} !important;
+        --yt-sys-color-baseline--wordmark-text: {{pinktext}} !important;
+        --yt-sys-color-baseline--assistive-feed-vibrant-gradient-1: color-mix(in srgb, {{cyan}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--assistive-feed-vibrant-gradient-2: color-mix(in srgb, {{orchid}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--assistive-feed-vibrant-gradient-3: {{error}} !important;
+        --yt-sys-color-baseline--assistive-feed-themed-gradient-1: color-mix(in srgb, {{cyan}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--assistive-feed-themed-gradient-2: color-mix(in srgb, {{violet}} 35%, {{bg}}) !important;
+        --yt-sys-color-baseline--assistive-feed-themed-gradient-3: color-mix(in srgb, {{error}} 35%, {{bg}}) !important;
+        --yt-deprecated-overlay-icon-active-other: {{pinktext}} !important;
+    }
+}
+/* /youtube */
