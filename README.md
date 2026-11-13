@@ -32,6 +32,7 @@ Soft violet-gray with pastel pink, baby blue, mint, lemon and lilac. The theme o
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/green.png" width="20" height="20" alt=""> | Chicon | `#dcf8bc` | additions |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/butter.png" width="20" height="20" alt=""> | Thunderbolt | `#fff1b0` | warnings, numbers |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/peach.png" width="20" height="20" alt=""> | Peachy Bon-Bon | `#ffd2b8` | constants |
+| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/page.png" width="20" height="20" alt=""> | Quixotic Plum | `#4a4553` | web page background (dark reader): gray, a hint of plum |
 <!-- /palette -->
 
 All of it is in [`palette.toml`](palette.toml).
