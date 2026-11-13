@@ -2,6 +2,8 @@
 
 The [nekozame](https://github.com/purplekairi1312/nekozame-theme) theme for Bitwig: soft violet-gray with pastel pink, baby blue, mint, lemon and lilac. For the latest Bitwig (6.1.7).
 
+![Bitwig Studio with nekozame](../../assets/bitwig-preview.png)
+
 ## Install
 
 1. Download [`nekozame.bte`](https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/themes/bitwig/nekozame.bte), get the [Bitwig Theme Editor](https://github.com/Berikai/bitwig-theme-editor) and quit Bitwig.
