@@ -29,3 +29,79 @@
     background: {{pink}} !important;
     border-color: {{pink}} !important;
 }
+
+/* github: dark reader leaves its outlines and buttons too light, so outlines,
+   buttons and topic tags go darker, the open tab's underline pink, and its
+   green main buttons the pink nekozame button */
+@-moz-document domain("github.com") {
+    :root[data-darkreader-scheme="dark"] :is(*, *::before, *::after) {
+        border-color: {{deep}} !important;
+    }
+    :root[data-darkreader-scheme="dark"] :is(.btn, .Button, .BtnGroup-item, [class*="prc-Button-ButtonBase"]):not(.btn-primary, .Button--primary, [data-variant="primary"]) {
+        background: {{panel}} !important;
+    }
+    :root[data-darkreader-scheme="dark"] :is(.btn, .Button, .BtnGroup-item, [class*="prc-Button-ButtonBase"]):not(.btn-primary, .Button--primary, [data-variant="primary"]):hover {
+        background: {{deep}} !important;
+    }
+    :root[data-darkreader-scheme="dark"] :is(.Button--primary, [data-variant="primary"]) {
+        background: {{orchid}} !important;
+        color: {{deep}} !important;
+    }
+    :root[data-darkreader-scheme="dark"] .topic-tag {
+        background: {{deep}} !important;
+        color: {{blue}} !important;
+    }
+    :root[data-darkreader-scheme="dark"] :is(.UnderlineNav-item.selected, .UnderlineNav-item[aria-current]:not([aria-current="false"]), [class*="UnderlineItem"][aria-current]:not([aria-current="false"]))::after {
+        background: {{orchid}} !important;
+    }
+}
+
+/* youtube: dark reader stays off there (see the dark reader settings), and
+   youtube's own colours, light or dark, become nekozame's. it draws nearly
+   everything from these variables, and these win over improvedtube's themes */
+@-moz-document domain("youtube.com") {
+    html, html[dark], [dark] {
+        --yt-spec-base-background: {{bg}} !important;
+        --yt-spec-raised-background: {{panel}} !important;
+        --yt-spec-menu-background: {{panel}} !important;
+        --yt-spec-general-background-a: {{bg}} !important;
+        --yt-spec-general-background-b: {{panel}} !important;
+        --yt-spec-general-background-c: {{deep}} !important;
+        --yt-spec-inverted-background: {{pinktext}} !important;
+        --yt-spec-additive-background: {{raised}} !important;
+        --yt-spec-10-percent-layer: {{deep}} !important;
+        --yt-spec-outline: {{deep}} !important;
+        --yt-spec-text-primary: {{pinktext}} !important;
+        --yt-spec-text-secondary: {{comment}} !important;
+        --yt-spec-text-disabled: {{dim}} !important;
+        --yt-spec-text-primary-inverse: {{deep}} !important;
+        --yt-spec-icon-active-other: {{pinktext}} !important;
+        --yt-spec-icon-inactive: {{comment}} !important;
+        --yt-spec-icon-disabled: {{dim}} !important;
+        --yt-spec-wordmark-text: {{pinktext}} !important;
+        --yt-spec-call-to-action: {{blue}} !important;
+        --yt-spec-themed-blue: {{blue}} !important;
+        --yt-spec-static-brand-red: {{orchid}} !important;
+        --yt-spec-brand-background-solid: {{bg}} !important;
+        --yt-spec-brand-background-primary: {{panel}} !important;
+        --yt-spec-brand-background-secondary: {{deep}} !important;
+        --yt-spec-badge-chip-background: {{raised}} !important;
+        --yt-spec-button-chip-background-hover: {{selection}} !important;
+        --yt-spec-touch-response: {{selection}} !important;
+        --yt-spec-mono-filled: {{orchid}} !important;
+        --yt-spec-mono-filled-hover: {{pink}} !important;
+        --yt-spec-mono-tonal: {{raised}} !important;
+        --yt-spec-mono-tonal-hover: {{selection}} !important;
+        --ytd-searchbox-background: {{deep}} !important;
+        --ytd-searchbox-text-color: {{pinktext}} !important;
+        --ytd-searchbox-legacy-border-color: {{deep}} !important;
+        --ytd-searchbox-legacy-button-color: {{panel}} !important;
+        --ytd-searchbox-legacy-button-border-color: {{deep}} !important;
+    }
+    html, ytd-app, ytd-masthead #background, #frosted-glass {
+        background: {{bg}} !important;
+    }
+    .ytp-play-progress, .ytp-swatch-background-color, .ytp-scrubber-button {
+        background: {{orchid}} !important;
+    }
+}

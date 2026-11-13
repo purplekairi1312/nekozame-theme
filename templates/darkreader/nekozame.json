@@ -1,6 +1,7 @@
 {
   "enabled": true,
   "detectDarkTheme": false,
+  "disabledFor": ["youtube.com", "www.youtube.com", "m.youtube.com"],
   "theme": {
     "mode": 1,
     "brightness": 100,

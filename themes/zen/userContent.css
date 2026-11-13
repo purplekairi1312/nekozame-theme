@@ -29,3 +29,79 @@
     background: #ffd4ee !important;
     border-color: #ffd4ee !important;
 }
+
+/* github: dark reader leaves its outlines and buttons too light, so outlines,
+   buttons and topic tags go darker, the open tab's underline pink, and its
+   green main buttons the pink nekozame button */
+@-moz-document domain("github.com") {
+    :root[data-darkreader-scheme="dark"] :is(*, *::before, *::after) {
+        border-color: #433a55 !important;
+    }
+    :root[data-darkreader-scheme="dark"] :is(.btn, .Button, .BtnGroup-item, [class*="prc-Button-ButtonBase"]):not(.btn-primary, .Button--primary, [data-variant="primary"]) {
+        background: #4f4562 !important;
+    }
+    :root[data-darkreader-scheme="dark"] :is(.btn, .Button, .BtnGroup-item, [class*="prc-Button-ButtonBase"]):not(.btn-primary, .Button--primary, [data-variant="primary"]):hover {
+        background: #433a55 !important;
+    }
+    :root[data-darkreader-scheme="dark"] :is(.Button--primary, [data-variant="primary"]) {
+        background: #ffc0e5 !important;
+        color: #433a55 !important;
+    }
+    :root[data-darkreader-scheme="dark"] .topic-tag {
+        background: #433a55 !important;
+        color: #b8e4ff !important;
+    }
+    :root[data-darkreader-scheme="dark"] :is(.UnderlineNav-item.selected, .UnderlineNav-item[aria-current]:not([aria-current="false"]), [class*="UnderlineItem"][aria-current]:not([aria-current="false"]))::after {
+        background: #ffc0e5 !important;
+    }
+}
+
+/* youtube: dark reader stays off there (see the dark reader settings), and
+   youtube's own colours, light or dark, become nekozame's. it draws nearly
+   everything from these variables, and these win over improvedtube's themes */
+@-moz-document domain("youtube.com") {
+    html, html[dark], [dark] {
+        --yt-spec-base-background: #5a4f6e !important;
+        --yt-spec-raised-background: #4f4562 !important;
+        --yt-spec-menu-background: #4f4562 !important;
+        --yt-spec-general-background-a: #5a4f6e !important;
+        --yt-spec-general-background-b: #4f4562 !important;
+        --yt-spec-general-background-c: #433a55 !important;
+        --yt-spec-inverted-background: #ffd9ef !important;
+        --yt-spec-additive-background: #685c7f !important;
+        --yt-spec-10-percent-layer: #433a55 !important;
+        --yt-spec-outline: #433a55 !important;
+        --yt-spec-text-primary: #ffd9ef !important;
+        --yt-spec-text-secondary: #d8cdec !important;
+        --yt-spec-text-disabled: #b3a7cb !important;
+        --yt-spec-text-primary-inverse: #433a55 !important;
+        --yt-spec-icon-active-other: #ffd9ef !important;
+        --yt-spec-icon-inactive: #d8cdec !important;
+        --yt-spec-icon-disabled: #b3a7cb !important;
+        --yt-spec-wordmark-text: #ffd9ef !important;
+        --yt-spec-call-to-action: #b8e4ff !important;
+        --yt-spec-themed-blue: #b8e4ff !important;
+        --yt-spec-static-brand-red: #ffc0e5 !important;
+        --yt-spec-brand-background-solid: #5a4f6e !important;
+        --yt-spec-brand-background-primary: #4f4562 !important;
+        --yt-spec-brand-background-secondary: #433a55 !important;
+        --yt-spec-badge-chip-background: #685c7f !important;
+        --yt-spec-button-chip-background-hover: #8a76a8 !important;
+        --yt-spec-touch-response: #8a76a8 !important;
+        --yt-spec-mono-filled: #ffc0e5 !important;
+        --yt-spec-mono-filled-hover: #ffd4ee !important;
+        --yt-spec-mono-tonal: #685c7f !important;
+        --yt-spec-mono-tonal-hover: #8a76a8 !important;
+        --ytd-searchbox-background: #433a55 !important;
+        --ytd-searchbox-text-color: #ffd9ef !important;
+        --ytd-searchbox-legacy-border-color: #433a55 !important;
+        --ytd-searchbox-legacy-button-color: #4f4562 !important;
+        --ytd-searchbox-legacy-button-border-color: #433a55 !important;
+    }
+    html, ytd-app, ytd-masthead #background, #frosted-glass {
+        background: #5a4f6e !important;
+    }
+    .ytp-play-progress, .ytp-swatch-background-color, .ytp-scrubber-button {
+        background: #ffc0e5 !important;
+    }
+}
