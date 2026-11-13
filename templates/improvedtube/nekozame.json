@@ -1,0 +1,6 @@
+{
+  "theme": "custom",
+  "theme_primary_color": [{{bg|rgb}}],
+  "theme_secondary_color": [{{panel|rgb}}],
+  "theme_text_color": [{{pinktext|rgb}}]
+}
