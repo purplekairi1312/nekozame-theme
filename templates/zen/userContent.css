@@ -1,27 +1,23 @@
-/* nekozame for web pages in zen (and firefox): links in the nekozame pinks on every
+/* nekozame for web pages in zen (and firefox): links in nekozame baby blue on every
    page dark reader darkens (it marks the page), over whatever colour the site
-   gives them. pages it leaves light keep their own links, and buttons that are
+   gives them (visited ones too: lilac would blend into the pink text). pages it leaves light keep their own links, and buttons that are
    links keep their own look, except the two kinds below. generated from palette.toml by generate.py.
    goes in your profile's chrome/ folder, next to userChrome.css */
-:root[data-darkreader-scheme="dark"] a:link:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
-    color: {{orchid}} !important;
-    text-decoration-color: {{orchid}} !important;
-}
-:root[data-darkreader-scheme="dark"] a:visited:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
-    color: {{violet}} !important;
-    text-decoration-color: {{violet}} !important;
+:root[data-darkreader-scheme="dark"] a:is(:link, :visited):not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
+    color: {{blue}} !important;
+    text-decoration-color: {{blue}} !important;
 }
 :root[data-darkreader-scheme="dark"] a:hover:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
-    color: {{pink}} !important;
+    color: {{orchid}} !important;
 }
 
 /* buttons sites draw as plain links (bootstrap's btn-link, sourcehut's
-   "projects ▶") get the link pink, and their main buttons (btn-primary) the
+   "projects ▶") get the link blue, and their main buttons (btn-primary) the
    pink nekozame button with dark text, instead of whatever blue or green
    dark reader made of the site's colour */
 :root[data-darkreader-scheme="dark"] :is(a, button)[class*="btn-link"] {
-    color: {{orchid}} !important;
-    text-decoration-color: {{orchid}} !important;
+    color: {{blue}} !important;
+    text-decoration-color: {{blue}} !important;
 }
 :root[data-darkreader-scheme="dark"] :is(a, button, input)[class*="btn-primary"] {
     background: {{orchid}} !important;
