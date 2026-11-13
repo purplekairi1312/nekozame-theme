@@ -838,3 +838,31 @@
     }
 }
 /* /youtube */
+
+/* bandcamp: artists pick their page's colours (often black with a loud
+   accent), which dark reader leaves as they are. the page, its text and
+   its links become nekozame instead */
+@-moz-document domain("bandcamp.com") {
+    body, #pgBd, #centerWrapper, #propOpenWrapper, #customHeaderWrapper,
+    #menubar-wrapper, #menubar, .menubar, header, nav {
+        background-color: {{bg}} !important;
+    }
+    #pgBd, #pgBd :is(p, span, div, h2, h3, td, li, .custom-color, .secondaryText),
+    .custom-color, .secondaryText {
+        color: {{pinktext}} !important;
+    }
+    #pgBd :is(h2, h3).trackTitle, #name-section .trackTitle {
+        color: {{orchid}} !important;
+    }
+    a, a *, .custom-link-color, #pgBd a, #pgBd .custom-link-color {
+        color: {{blue}} !important;
+    }
+    .playbutton, .playbutton:hover, .progbar_fill, .thumb {
+        background-color: {{orchid}} !important;
+        border-color: {{orchid}} !important;
+    }
+    .progbar_empty {
+        background-color: {{deep}} !important;
+        border-color: {{deep}} !important;
+    }
+}
