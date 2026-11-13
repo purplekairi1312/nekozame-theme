@@ -33,7 +33,7 @@
 
 /* github: dark reader stays off there (see the dark reader settings). github's
    own colours become nekozame's instead, outlines and buttons darker than the
-   page. written by github-colors.py from github's dark theme */
+   page. written by web-colors.py from github's dark theme */
 /* github */
 @-moz-document domain("github.com") {
     :root, [data-color-mode] {
@@ -92,7 +92,7 @@
         --borderColor-danger-emphasis: #ffb3c8 !important;
         --borderColor-danger-muted: color-mix(in srgb, #ffb3c8 40%, transparent) !important;
         --borderColor-default: #433a55 !important;
-        --borderColor-disabled: color-mix(in srgb, #433a55 10%, transparent) !important;
+        --borderColor-disabled: #433a55 !important;
         --borderColor-done-emphasis: #e3ccff !important;
         --borderColor-done-muted: color-mix(in srgb, #e3ccff 40%, transparent) !important;
         --borderColor-emphasis: #433a55 !important;
@@ -106,7 +106,7 @@
         --button-inactive-bgColor: #7c6a9a !important;
         --button-inactive-fgColor: color-mix(in srgb, #d8cdec 17%, #b3a7cb) !important;
         --button-outline-bgColor-active: color-mix(in srgb, #b8e4ff 35%, #5a4f6e) !important;
-        --button-outline-bgColor-rest: #ffd9ef !important;
+        --button-outline-bgColor-rest: #433a55 !important;
         --button-outline-fgColor-disabled: color-mix(in srgb, #b8e4ff 50%, transparent) !important;
         --button-outline-fgColor-hover: #b8e4ff !important;
         --button-outline-fgColor-rest: #b8e4ff !important;
@@ -121,7 +121,7 @@
         --buttonCounter-primary-bgColor-rest: color-mix(in srgb, color-mix(in srgb, #c8f7dc 35%, #5a4f6e) 20%, transparent) !important;
         --buttonKeybindingHint-danger-bgColor-active: color-mix(in srgb, #433a55 40%, transparent) !important;
         --buttonKeybindingHint-danger-bgColor-hover: color-mix(in srgb, #433a55 20%, transparent) !important;
-        --buttonKeybindingHint-danger-borderColor-hover: color-mix(in srgb, #433a55 10%, transparent) !important;
+        --buttonKeybindingHint-danger-borderColor-hover: #433a55 !important;
         --buttonKeybindingHint-default-bgColor-rest: color-mix(in srgb, #8a76a8 17%, #7c6a9a) !important;
         --buttonKeybindingHint-inactive-bgColor: color-mix(in srgb, #8a76a8 17%, #7c6a9a) !important;
         --codeMirror-syntax-fgColor-comment: #a094b8 !important;
@@ -137,7 +137,7 @@
         --contribution-default-bgColor-2: color-mix(in srgb, #c8f7dc 35%, #5a4f6e) !important;
         --contribution-default-bgColor-3: #c8f7dc !important;
         --contribution-default-bgColor-4: #c8f7dc !important;
-        --contribution-default-borderColor-0: color-mix(in srgb, #433a55 5%, transparent) !important;
+        --contribution-default-borderColor-0: #433a55 !important;
         --contribution-halloween-bgColor-1: #ffd2b8 !important;
         --contribution-halloween-bgColor-2: #ffd2b8 !important;
         --contribution-halloween-bgColor-3: color-mix(in srgb, #ffd2b8 35%, #5a4f6e) !important;
@@ -649,28 +649,38 @@
         --skeletonLoader-bgColor: color-mix(in srgb, #a094b8 20%, transparent) !important;
         --timelineBadge-bgColor: color-mix(in srgb, #7c6a9a 65%, #685c7f) !important;
         --underlineNav-borderColor-active: #ffc0e5 !important;
+        --ansi-whiteBright: #ffd9ef !important;
         --avatar-bgColor: color-mix(in srgb, #ffd9ef 10%, transparent) !important;
         --bgColor-black: #433a55 !important;
         --bgColor-inset: #433a55 !important;
-        --borderColor-muted: color-mix(in srgb, #433a55 70%, transparent) !important;
-        --borderColor-translucent: color-mix(in srgb, #433a55 15%, transparent) !important;
+        --bgColor-inverse: #ffd9ef !important;
+        --bgColor-white: #ffd9ef !important;
+        --borderColor-muted: #433a55 !important;
+        --borderColor-translucent: #433a55 !important;
+        --button-danger-fgColor-active: #ffd9ef !important;
         --button-danger-fgColor-disabled: color-mix(in srgb, #ffb3c8 50%, transparent) !important;
+        --button-danger-fgColor-hover: #ffd9ef !important;
+        --button-danger-iconColor-hover: #ffd9ef !important;
         --button-default-bgColor-active: #433a55 !important;
         --button-default-bgColor-hover: #433a55 !important;
         --button-default-bgColor-rest: #4f4562 !important;
         --button-default-bgColor-selected: #433a55 !important;
+        --button-outline-fgColor-active: #433a55 !important;
         --button-primary-bgColor-rest: #ffc0e5 !important;
         --buttonCounter-danger-bgColor-disabled: color-mix(in srgb, #ffb3c8 5%, transparent) !important;
         --buttonCounter-danger-fgColor-disabled: color-mix(in srgb, #ffb3c8 50%, transparent) !important;
+        --buttonCounter-danger-fgColor-hover: #ffd9ef !important;
         --buttonCounter-outline-bgColor-disabled: color-mix(in srgb, #b8e4ff 5%, transparent) !important;
         --buttonKeybindingHint-primary-bgColor-disabled: color-mix(in srgb, color-mix(in srgb, #c8f7dc 35%, #5a4f6e) 10%, transparent) !important;
         --buttonKeybindingHint-primary-borderColor-rest: color-mix(in srgb, color-mix(in srgb, #c8f7dc 35%, #5a4f6e) 10%, transparent) !important;
         --control-checked-fgColor-disabled: #433a55 !important;
         --control-danger-bgColor-active: color-mix(in srgb, #ffb3c8 40%, transparent) !important;
+        --controlKnob-bgColor-checked: #ffd9ef !important;
         --controlTrack-bgColor-rest: #433a55 !important;
         --fgColor-black: #433a55 !important;
         --fgColor-onEmphasis: #433a55 !important;
         --fgColor-onInverse: #433a55 !important;
+        --fgColor-white: #ffd9ef !important;
         --header-fgColor-default: color-mix(in srgb, #ffd9ef 70%, transparent) !important;
         --overlay-bgColor: #4f4562 !important;
         --selection-bgColor: color-mix(in srgb, #b8e4ff 70%, transparent) !important;
@@ -681,4 +691,150 @@
 }
 /* /github */
 
-/* youtube: themed by improvedtube's custom theme (improvedtube.json), not here */
+/* youtube: dark reader stays off there too. improvedtube's custom theme
+   (improvedtube/nekozame.json) colours the page and top bar, but youtube's
+   newer colours (text, icons, cards) it doesn't reach, so they're here,
+   written by web-colors.py from youtube's dark theme */
+/* youtube */
+@-moz-document domain("youtube.com") {
+    html, [dark], [light] {
+        color-scheme: dark !important;
+        --yt-sys-color-baseline--add-on-blue-base-background: color-mix(in srgb, #b8e4ff 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-blue-primary: #b8e4ff !important;
+        --yt-sys-color-baseline--add-on-blue-text-primary: #b8e4ff !important;
+        --yt-sys-color-baseline--add-on-green-base-background: color-mix(in srgb, #dcf8bc 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-green-primary: color-mix(in srgb, #dcf8bc 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-green-text-primary: #fff1b0 !important;
+        --yt-sys-color-baseline--add-on-magenta-base-background: color-mix(in srgb, #ffc0e5 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-magenta-primary: #ffc0e5 !important;
+        --yt-sys-color-baseline--add-on-magenta-text-primary: #ffc0e5 !important;
+        --yt-sys-color-baseline--add-on-orange-base-background: color-mix(in srgb, #ffb3c8 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-orange-primary: #ffd2b8 !important;
+        --yt-sys-color-baseline--add-on-orange-text-primary: #ffd2b8 !important;
+        --yt-sys-color-baseline--add-on-purple-base-background: color-mix(in srgb, #e3ccff 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-purple-primary: #e3ccff !important;
+        --yt-sys-color-baseline--add-on-purple-text-primary: #e3ccff !important;
+        --yt-sys-color-baseline--add-on-red-base-background: color-mix(in srgb, #ffb3c8 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-red-primary: #ffb3c8 !important;
+        --yt-sys-color-baseline--add-on-red-text-primary: #ffb3c8 !important;
+        --yt-sys-color-baseline--add-on-teal-base-background: color-mix(in srgb, #c8f7dc 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-teal-primary: color-mix(in srgb, #c8f7dc 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--add-on-teal-text-primary: #c8f7dc !important;
+        --yt-sys-color-baseline--additive-background: color-mix(in srgb, #ffd9ef 10%, transparent) !important;
+        --yt-sys-color-baseline--additive-background-inverse: color-mix(in srgb, #433a55 5%, transparent) !important;
+        --yt-sys-color-baseline--background-complete: color-mix(in srgb, color-mix(in srgb, #c8f7dc 35%, #5a4f6e) 60%, transparent) !important;
+        --yt-sys-color-baseline--background-warning: color-mix(in srgb, color-mix(in srgb, #ffd2b8 35%, #5a4f6e) 60%, transparent) !important;
+        --yt-sys-color-baseline--base-background: #5a4f6e !important;
+        --yt-sys-color-baseline--blue-1: color-mix(in srgb, #b8e4ff 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--blue-2: #b8e4ff !important;
+        --yt-sys-color-baseline--blue-3: #b8e4ff !important;
+        --yt-sys-color-baseline--blue-4: #b8e4ff !important;
+        --yt-sys-color-baseline--blue-5: #b8e4ff !important;
+        --yt-sys-color-baseline--blue-6: #b8e4ff !important;
+        --yt-sys-color-baseline--blue-7: #b8e4ff !important;
+        --yt-sys-color-baseline--brand-red-contrast: #ffc0e5 !important;
+        --yt-sys-color-baseline--button-chip-background-hover: color-mix(in srgb, #ffd9ef 20%, transparent) !important;
+        --yt-sys-color-baseline--call-to-action: #b8e4ff !important;
+        --yt-sys-color-baseline--call-to-action-hover: #b8f5f2 !important;
+        --yt-sys-color-baseline--call-to-action-inverse: #b8e4ff !important;
+        --yt-sys-color-baseline--error-background-red: color-mix(in srgb, #ffb3c8 20%, transparent) !important;
+        --yt-sys-color-baseline--error-indicator: #ffb3c8 !important;
+        --yt-sys-color-baseline--error-indicator-inverse: color-mix(in srgb, #ffb3c8 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--feed-vibrant-gradient1: color-mix(in srgb, #b8f5f2 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--feed-vibrant-gradient2: color-mix(in srgb, #ffc0e5 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--feed-vibrant-gradient3: #ffb3c8 !important;
+        --yt-sys-color-baseline--filled-hover-light: #ffd9ef !important;
+        --yt-sys-color-baseline--filled-state-layer: color-mix(in srgb, #e8def5 67%, #d8cdec) !important;
+        --yt-sys-color-baseline--filled-touch-light: #ffd9ef !important;
+        --yt-sys-color-baseline--frost-container-heavy: color-mix(in srgb, color-mix(in srgb, #5a4f6e 55%, #4f4562) 85%, transparent) !important;
+        --yt-sys-color-baseline--frost-container-light: color-mix(in srgb, color-mix(in srgb, #5a4f6e 55%, #4f4562) 30%, transparent) !important;
+        --yt-sys-color-baseline--frost-container-medium: color-mix(in srgb, color-mix(in srgb, #5a4f6e 55%, #4f4562) 60%, transparent) !important;
+        --yt-sys-color-baseline--frost-container-semi-heavy: color-mix(in srgb, color-mix(in srgb, #5a4f6e 55%, #4f4562) 75%, transparent) !important;
+        --yt-sys-color-baseline--frosted-glass-desktop: #5a4f6e !important;
+        --yt-sys-color-baseline--frosted-glass-mobile: #5a4f6e !important;
+        --yt-sys-color-baseline--genai-1: color-mix(in srgb, #b8f5f2 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--genai-1-additive: color-mix(in srgb, color-mix(in srgb, #b8f5f2 35%, #5a4f6e) 30%, transparent) !important;
+        --yt-sys-color-baseline--genai-2: color-mix(in srgb, #ffc0e5 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--genai-2-additive: color-mix(in srgb, color-mix(in srgb, #ffc0e5 35%, #5a4f6e) 30%, transparent) !important;
+        --yt-sys-color-baseline--genai-3: color-mix(in srgb, #ffc0e5 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--genai-3-additive: color-mix(in srgb, color-mix(in srgb, #ffc0e5 35%, #5a4f6e) 30%, transparent) !important;
+        --yt-sys-color-baseline--genai-4: #ffb3c8 !important;
+        --yt-sys-color-baseline--genai-4-additive: color-mix(in srgb, #ffb3c8 30%, transparent) !important;
+        --yt-sys-color-baseline--green-6: #fff1b0 !important;
+        --yt-sys-color-baseline--grey-4: color-mix(in srgb, #e8def5 52%, #d8cdec) !important;
+        --yt-sys-color-baseline--grey-6: #ffd9ef !important;
+        --yt-sys-color-baseline--icon-warning: #fff1b0 !important;
+        --yt-sys-color-baseline--inverted-background: #ffc0e5 !important;
+        --yt-sys-color-baseline--inverted-background-hover: #ffd4ee !important;
+        --yt-sys-color-baseline--menu-background: #4f4562 !important;
+        --yt-sys-color-baseline--mono-filled-hover: #ffd4ee !important;
+        --yt-sys-color-baseline--mono-filled-hover-inverse: color-mix(in srgb, #7c6a9a 55%, #685c7f) !important;
+        --yt-sys-color-baseline--mono-tonal-hover: color-mix(in srgb, #ffd9ef 20%, transparent) !important;
+        --yt-sys-color-baseline--mono-tonal-hover-inverse: color-mix(in srgb, #433a55 10%, transparent) !important;
+        --yt-sys-color-baseline--outline: #433a55 !important;
+        --yt-sys-color-baseline--outline-inverse: #433a55 !important;
+        --yt-sys-color-baseline--outline-inverse-opaque: #433a55 !important;
+        --yt-sys-color-baseline--outline-opaque: #433a55 !important;
+        --yt-sys-color-baseline--outline-rim: #433a55 !important;
+        --yt-sys-color-baseline--outline-rim-inverse: #433a55 !important;
+        --yt-sys-color-baseline--outline-wash: transparent !important;
+        --yt-sys-color-baseline--purple-6: #e3ccff !important;
+        --yt-sys-color-baseline--raised-background: #4f4562 !important;
+        --yt-sys-color-baseline--red-3: #ffb3c8 !important;
+        --yt-sys-color-baseline--red-4: #ffb3c8 !important;
+        --yt-sys-color-baseline--red-indicator: #ffc0e5 !important;
+        --yt-sys-color-baseline--shadow-medium: color-mix(in srgb, #433a55 25%, transparent) !important;
+        --yt-sys-color-baseline--solid-background: color-mix(in srgb, #ffd9ef 52%, #e8def5) !important;
+        --yt-sys-color-baseline--solid-background-inverse: #5a4f6e !important;
+        --yt-sys-color-baseline--solid-rim: color-mix(in srgb, #ffd9ef 20%, transparent) !important;
+        --yt-sys-color-baseline--solid-rim-inverse: color-mix(in srgb, #ffd9ef 20%, transparent) !important;
+        --yt-sys-color-baseline--solid-wash: color-mix(in srgb, #ffd9ef 30%, transparent) !important;
+        --yt-sys-color-baseline--solid-wash-inverse: color-mix(in srgb, #ffd9ef 15%, transparent) !important;
+        --yt-sys-color-baseline--state-mono-filled-hovered: color-mix(in srgb, #433a55 5%, transparent) !important;
+        --yt-sys-color-baseline--state-mono-filled-pressed: color-mix(in srgb, #433a55 10%, transparent) !important;
+        --yt-sys-color-baseline--state-mono-standard-hovered: color-mix(in srgb, #ffd9ef 5%, transparent) !important;
+        --yt-sys-color-baseline--state-mono-standard-pressed: color-mix(in srgb, #ffd9ef 10%, transparent) !important;
+        --yt-sys-color-baseline--state-overlay-filled-hovered: color-mix(in srgb, #433a55 20%, transparent) !important;
+        --yt-sys-color-baseline--state-overlay-filled-pressed: color-mix(in srgb, #433a55 30%, transparent) !important;
+        --yt-sys-color-baseline--state-overlay-standard-hovered: color-mix(in srgb, #ffd9ef 5%, transparent) !important;
+        --yt-sys-color-baseline--state-overlay-standard-pressed: color-mix(in srgb, #ffd9ef 5%, transparent) !important;
+        --yt-sys-color-baseline--status-bar: #ffd9ef !important;
+        --yt-sys-color-baseline--suggested-action: color-mix(in srgb, #b8e4ff 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--suggested-action-hover: color-mix(in srgb, #a094b8 33%, #8a76a8) !important;
+        --yt-sys-color-baseline--suggested-action-inverse: #b8e4ff !important;
+        --yt-sys-color-baseline--surface-container: #4f4562 !important;
+        --yt-sys-color-baseline--system-bar: #ffd9ef !important;
+        --yt-sys-color-baseline--text-complete: #c8f7dc !important;
+        --yt-sys-color-baseline--text-disabled: #b3a7cb !important;
+        --yt-sys-color-baseline--text-disabled-inverse: #b3a7cb !important;
+        --yt-sys-color-baseline--text-error: #ffb3c8 !important;
+        --yt-sys-color-baseline--text-primary: #ffd9ef !important;
+        --yt-sys-color-baseline--text-primary-inverse: #433a55 !important;
+        --yt-sys-color-baseline--text-secondary: #d8cdec !important;
+        --yt-sys-color-baseline--text-secondary-inverse: color-mix(in srgb, #a094b8 51%, #8a76a8) !important;
+        --yt-sys-color-baseline--text-warning: #ffd2b8 !important;
+        --yt-sys-color-baseline--themed-green: #c8f7dc !important;
+        --yt-sys-color-baseline--themed-green-inverse: color-mix(in srgb, #c8f7dc 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--themed-overlay-background: color-mix(in srgb, #433a55 80%, transparent) !important;
+        --yt-sys-color-baseline--tonal-background: color-mix(in srgb, #ffd9ef 10%, transparent) !important;
+        --yt-sys-color-baseline--tonal-background-inverse: color-mix(in srgb, #433a55 10%, transparent) !important;
+        --yt-sys-color-baseline--tonal-hover-light: color-mix(in srgb, #ffd9ef 15%, transparent) !important;
+        --yt-sys-color-baseline--tonal-rim: color-mix(in srgb, #ffd9ef 10%, transparent) !important;
+        --yt-sys-color-baseline--tonal-rim-inverse: color-mix(in srgb, #433a55 5%, transparent) !important;
+        --yt-sys-color-baseline--tonal-state-layer: color-mix(in srgb, #ffd9ef 10%, transparent) !important;
+        --yt-sys-color-baseline--tonal-touch-light: color-mix(in srgb, #ffd9ef 25%, transparent) !important;
+        --yt-sys-color-baseline--tonal-wash: color-mix(in srgb, #ffd9ef 5%, transparent) !important;
+        --yt-sys-color-baseline--tonal-wash-inverse: color-mix(in srgb, #ffd9ef 20%, transparent) !important;
+        --yt-sys-color-baseline--touch-response: #ffd9ef !important;
+        --yt-sys-color-baseline--touch-response-inverse: #433a55 !important;
+        --yt-sys-color-baseline--wordmark-text: #ffd9ef !important;
+        --yt-sys-color-baseline--assistive-feed-vibrant-gradient-1: color-mix(in srgb, #b8f5f2 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--assistive-feed-vibrant-gradient-2: color-mix(in srgb, #ffc0e5 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--assistive-feed-vibrant-gradient-3: #ffb3c8 !important;
+        --yt-sys-color-baseline--assistive-feed-themed-gradient-1: color-mix(in srgb, #b8f5f2 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--assistive-feed-themed-gradient-2: color-mix(in srgb, #e3ccff 35%, #5a4f6e) !important;
+        --yt-sys-color-baseline--assistive-feed-themed-gradient-3: color-mix(in srgb, #ffb3c8 35%, #5a4f6e) !important;
+        --yt-deprecated-overlay-icon-active-other: #ffd9ef !important;
+    }
+}
+/* /youtube */
