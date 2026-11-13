@@ -14,10 +14,10 @@ Soft violet-gray with pastel pink, baby blue, mint, lemon and lilac. The theme o
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/linenum.png" width="20" height="20" alt=""> | Lush Mauve | `#a094b8` | line numbers |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/dim.png" width="20" height="20" alt=""> | Wisteria-Wise | `#b3a7cb` | disabled and inactive text |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/fg.png" width="20" height="20" alt=""> | White | `#ffffff` | text |
-| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/pinktext.png" width="20" height="20" alt=""> | Sweet Sachet | `#ffd9ef` | pink text: terminals, dark web pages |
+| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/pinktext.png" width="20" height="20" alt=""> | Sweet Sachet | `#ffd9ef` | pink text (terminals) |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/muted.png" width="20" height="20" alt=""> | Lingering Lilac | `#e8def5` | secondary text |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/comment.png" width="20" height="20" alt=""> | Italian Fitch | `#d8cdec` | code comments |
-| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/softwhite.png" width="20" height="20" alt=""> | Cold Snow | `#fff4fa` | bright text: tmux tabs, light pages |
+| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/softwhite.png" width="20" height="20" alt=""> | Cold Snow | `#fff4fa` | page text in browsers |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/lavender.png" width="20" height="20" alt=""> | Minute Mauve | `#f1e6ff` | operators, variables |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/orchid.png" width="20" height="20" alt=""> | Pretty in Pink | `#ffc0e5` | main accent: cursor, focus, titles |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/pink.png" width="20" height="20" alt=""> | Little Smile | `#ffd4ee` | soft accent, headings |
