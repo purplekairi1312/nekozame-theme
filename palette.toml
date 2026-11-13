@@ -17,7 +17,7 @@ fg = { hex = "#ffffff", name = "White", use = "text" }
 pinktext = { hex = "#ffd9ef", name = "Sweet Sachet", use = "pink text (terminals)" }
 muted = { hex = "#e8def5", name = "Lingering Lilac", use = "secondary text" }
 comment = { hex = "#d8cdec", name = "Italian Fitch", use = "code comments" }
-softwhite = { hex = "#fff4fa", name = "Cold Snow", use = "page text in browsers" }
+softwhite = { hex = "#fff4fa", name = "Cold Snow", use = "light page background in browsers" }
 lavender = { hex = "#f1e6ff", name = "Minute Mauve", use = "operators, variables" }
 
 [accent]
@@ -39,6 +39,3 @@ peach = { hex = "#ffd2b8", name = "Peachy Bon-Bon", use = "constants" }
 # black red green yellow blue magenta cyan white, then the bright ones
 normal = ["#433a55", "#ffb3c8", "#dcf8bc", "#fff1b0", "#b8e4ff", "#ffc0e5", "#b8f5f2", "#ffd4ee"]
 bright = ["#d9b8d6", "#ffcadb", "#c8f7dc", "#fff7cf", "#d6efff", "#ffd4ee", "#d6fbf8", "#ffe6f4"]
-
-[web]
-page = { hex = "#4a4553", name = "Quixotic Plum", use = "web page background (dark reader): gray, a hint of plum" }

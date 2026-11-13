@@ -17,7 +17,7 @@ Soft violet-gray with pastel pink, baby blue, mint, lemon and lilac. The theme o
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/pinktext.png" width="20" height="20" alt=""> | Sweet Sachet | `#ffd9ef` | pink text (terminals) |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/muted.png" width="20" height="20" alt=""> | Lingering Lilac | `#e8def5` | secondary text |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/comment.png" width="20" height="20" alt=""> | Italian Fitch | `#d8cdec` | code comments |
-| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/softwhite.png" width="20" height="20" alt=""> | Cold Snow | `#fff4fa` | page text in browsers |
+| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/softwhite.png" width="20" height="20" alt=""> | Cold Snow | `#fff4fa` | light page background in browsers |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/lavender.png" width="20" height="20" alt=""> | Minute Mauve | `#f1e6ff` | operators, variables |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/orchid.png" width="20" height="20" alt=""> | Pretty in Pink | `#ffc0e5` | main accent: cursor, focus, titles |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/pink.png" width="20" height="20" alt=""> | Little Smile | `#ffd4ee` | soft accent, headings |
@@ -32,7 +32,6 @@ Soft violet-gray with pastel pink, baby blue, mint, lemon and lilac. The theme o
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/green.png" width="20" height="20" alt=""> | Chicon | `#dcf8bc` | additions |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/butter.png" width="20" height="20" alt=""> | Thunderbolt | `#fff1b0` | warnings, numbers |
 | <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/peach.png" width="20" height="20" alt=""> | Peachy Bon-Bon | `#ffd2b8` | constants |
-| <img src="https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets/page.png" width="20" height="20" alt=""> | Quixotic Plum | `#4a4553` | web page background (dark reader): gray, a hint of plum |
 <!-- /palette -->
 
 All of it is in [`palette.toml`](palette.toml).

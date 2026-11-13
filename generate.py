@@ -21,7 +21,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 pal = tomllib.load(open(os.path.join(HERE, "palette.toml"), "rb"))
 
 colors = {}
-for section in ("surface", "text", "accent", "web"):
+for section in ("surface", "text", "accent"):
     colors.update({k: v["hex"] for k, v in pal[section].items()})
 for i, c in enumerate(pal["ansi"]["normal"] + pal["ansi"]["bright"]):
     colors[f"ansi{i}"] = c
@@ -52,7 +52,7 @@ for root, _, files in os.walk(os.path.join(HERE, "templates")):
 
 # swatches for krita, gimp, aseprite and anything else that reads .gpl
 gpl = ["GIMP Palette", "Name: nekozame", "Columns: 5", "# nekozame, purplekairi1312"]
-for section in ("surface", "text", "accent", "web"):
+for section in ("surface", "text", "accent"):
     for c in pal[section].values():
         gpl.append("%3d %3d %3d\t%s" % (*rgb(c["hex"]), c["name"]))
 os.makedirs(os.path.join(out, "palettes"), exist_ok=True)
@@ -72,7 +72,7 @@ def png(path, color, size=20):
 RAW = "https://raw.githubusercontent.com/purplekairi1312/nekozame-theme/main/assets"
 os.makedirs(os.path.join(HERE, "assets"), exist_ok=True)
 rows = ["| | Name | Hex | Used for |", "|---|---|---|---|"]
-for section in ("surface", "text", "accent", "web"):
+for section in ("surface", "text", "accent"):
     for key, c in pal[section].items():
         png(os.path.join(HERE, "assets", f"{key}.png"), c["hex"])
         rows.append(f'| <img src="{RAW}/{key}.png" width="20" height="20" alt=""> | {c["name"]} '
