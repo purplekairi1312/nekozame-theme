@@ -7,7 +7,7 @@
     "grayscale": 0,
     "sepia": 0,
     "darkSchemeBackgroundColor": "{{bg}}",
-    "darkSchemeTextColor": "{{softwhite}}",
+    "darkSchemeTextColor": "{{pinktext}}",
     "lightSchemeBackgroundColor": "{{softwhite}}",
     "lightSchemeTextColor": "{{deep}}",
     "scrollbarColor": "{{selection}}",
