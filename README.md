@@ -51,7 +51,7 @@ Everything is in [`themes/`](themes).
 | cava | `cava/config` | `~/.config/cava/config`, or `cava -p` it |
 | tmux | `tmux/nekozame.conf` | `source-file` it from your tmux.conf |
 | Starship | `starship/starship.toml` | `~/.config/starship.toml` (a full prompt config) |
-| Zen Browser | `zen/userChrome.css`, `zen/userContent.css` (pink links on every site) | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
+| Zen Browser | `zen/userChrome.css`, `zen/userContent.css` (links on every site, GitHub and YouTube in nekozame) | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
 | DankMaterialShell | `dms/nekozame.json` | Settings → Theme & Colors → Custom, or `"currentThemeName": "custom"` and `"customThemeFile"` in `~/.config/dms/settings.json` |
 | Discord | `discord/nekozame.theme.css` | Vencord's themes folder |
 | Dark Reader | `darkreader/nekozame.json` | Dark Reader → Settings → Advanced → Import Settings |
