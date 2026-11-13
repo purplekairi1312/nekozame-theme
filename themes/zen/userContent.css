@@ -1,15 +1,16 @@
 /* nekozame for web pages in zen (and firefox): links in the nekozame pinks on every
-   site, over whatever colour the site (or dark reader) gives them. buttons that
-   are links keep their own look. generated from palette.toml by generate.py.
+   page dark reader darkens (it marks the page), over whatever colour the site
+   gives them. pages it leaves light keep their own links, and buttons that are
+   links keep their own look. generated from palette.toml by generate.py.
    goes in your profile's chrome/ folder, next to userChrome.css */
-a:link:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
+:root[data-darkreader-scheme="dark"] a:link:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
     color: #ffc0e5 !important;
     text-decoration-color: #ffc0e5 !important;
 }
-a:visited:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
+:root[data-darkreader-scheme="dark"] a:visited:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
     color: #e3ccff !important;
     text-decoration-color: #e3ccff !important;
 }
-a:hover:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
+:root[data-darkreader-scheme="dark"] a:hover:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
     color: #ffd4ee !important;
 }
