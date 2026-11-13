@@ -1,7 +1,7 @@
 /* nekozame for web pages in zen (and firefox): links in the nekozame pinks on every
    page dark reader darkens (it marks the page), over whatever colour the site
    gives them. pages it leaves light keep their own links, and buttons that are
-   links keep their own look. generated from palette.toml by generate.py.
+   links keep their own look, except the two kinds below. generated from palette.toml by generate.py.
    goes in your profile's chrome/ folder, next to userChrome.css */
 :root[data-darkreader-scheme="dark"] a:link:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
     color: #ffc0e5 !important;
@@ -13,4 +13,23 @@
 }
 :root[data-darkreader-scheme="dark"] a:hover:not([role="button"]):not([class*="btn"]):not([class*="button"]):not([class*="Button"]) {
     color: #ffd4ee !important;
+}
+
+/* buttons sites draw as plain links (bootstrap's btn-link, sourcehut's
+   "projects ▶") get the link pink, and their main buttons (btn-primary) the
+   pink nekozame button with dark text, instead of whatever blue or green
+   dark reader made of the site's colour */
+:root[data-darkreader-scheme="dark"] :is(a, button)[class*="btn-link"] {
+    color: #ffc0e5 !important;
+    text-decoration-color: #ffc0e5 !important;
+}
+:root[data-darkreader-scheme="dark"] :is(a, button, input)[class*="btn-primary"] {
+    background: #ffc0e5 !important;
+    border-color: #ffc0e5 !important;
+    color: #433a55 !important;
+    text-decoration-color: #433a55 !important;
+}
+:root[data-darkreader-scheme="dark"] :is(a, button, input)[class*="btn-primary"]:hover {
+    background: #ffd4ee !important;
+    border-color: #ffd4ee !important;
 }
