@@ -39,3 +39,6 @@ peach = { hex = "#ffd2b8", name = "Peachy Bon-Bon", use = "constants" }
 # black red green yellow blue magenta cyan white, then the bright ones
 normal = ["#433a55", "#ffb3c8", "#dcf8bc", "#fff1b0", "#b8e4ff", "#ffc0e5", "#b8f5f2", "#ffd4ee"]
 bright = ["#d9b8d6", "#ffcadb", "#c8f7dc", "#fff7cf", "#d6efff", "#ffd4ee", "#d6fbf8", "#ffe6f4"]
+
+[web]
+page = { hex = "#4a4553", name = "Quixotic Plum", use = "web page background (dark reader): gray, a hint of plum" }
