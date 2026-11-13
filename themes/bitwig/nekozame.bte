@@ -1,4 +1,4 @@
-// nekozame for bitwig studio 6.1.4 (bitwig theme editor 2.4.0), purplekairi1312
+// nekozame for bitwig studio 6.1.7 (the latest) (bitwig theme editor 2.4.0), purplekairi1312
 // only overrides are listed; everything else stays bitwig's default.
 // its shades are tuned by hand for bitwig, so generate.py leaves this file as is.
 Gradient: true
