@@ -56,7 +56,7 @@ Everything is in [`themes/`](themes).
 | Discord | `discord/nekozame.theme.css` | Vencord's themes folder |
 | Dark Reader | `darkreader/nekozame.json` (off on GitHub and YouTube, which have their own) | Dark Reader → Settings → Advanced → Import Settings |
 | YouTube | `improvedtube/nekozame.json`, for [ImprovedTube](https://github.com/code-charity/youtube)'s custom theme | ImprovedTube → Settings → Backup & reset → Import settings (only changes the theme) |
-| Bitwig Studio | `bitwig/nekozame_bitwig_6.1.4.bte` | load it with the [Bitwig Theme Editor](https://github.com/Berikai/bitwig-theme-editor) |
+| Bitwig Studio | `bitwig/nekozame_bitwig_6.1.4.bte` | load it with the [Bitwig Theme Editor](https://github.com/Berikai/bitwig-theme-editor): see [its readme](themes/bitwig/README.md) |
 | Krita, GIMP, Aseprite | `palettes/nekozame.gpl` | the app's palettes folder |
 
 ## Changing colors
