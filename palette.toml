@@ -14,10 +14,10 @@ dim = { hex = "#b3a7cb", name = "Wisteria-Wise", use = "disabled and inactive te
 
 [text]
 fg = { hex = "#ffffff", name = "White", use = "text" }
-pinktext = { hex = "#ffd9ef", name = "Sweet Sachet", use = "pink text (terminals)" }
+pinktext = { hex = "#ffd9ef", name = "Sweet Sachet", use = "pink text: terminals, dark web pages" }
 muted = { hex = "#e8def5", name = "Lingering Lilac", use = "secondary text" }
 comment = { hex = "#d8cdec", name = "Italian Fitch", use = "code comments" }
-softwhite = { hex = "#fff4fa", name = "Cold Snow", use = "page text in browsers" }
+softwhite = { hex = "#fff4fa", name = "Cold Snow", use = "bright text: tmux tabs, light pages" }
 lavender = { hex = "#f1e6ff", name = "Minute Mauve", use = "operators, variables" }
 
 [accent]
