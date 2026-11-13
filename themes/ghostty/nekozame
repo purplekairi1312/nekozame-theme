@@ -10,6 +10,10 @@ selection-background = #ffc0e5
 selection-foreground = #433a55
 split-divider-color = #ffd1ec
 
+# see-through, so the wallpaper shows; blurred where the desktop can (macOS)
+background-opacity = 0.85
+background-blur = 20
+
 # black / red / green / yellow / blue / magenta / cyan / white
 palette = 0=#433a55
 palette = 1=#ffb3c8

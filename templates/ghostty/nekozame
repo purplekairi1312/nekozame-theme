@@ -10,6 +10,10 @@ selection-background = {{orchid}}
 selection-foreground = {{deep}}
 split-divider-color = {{border}}
 
+# see-through, so the wallpaper shows; blurred where the desktop can (macOS)
+background-opacity = 0.85
+background-blur = 20
+
 # black / red / green / yellow / blue / magenta / cyan / white
 palette = 0={{ansi0}}
 palette = 1={{ansi1}}
