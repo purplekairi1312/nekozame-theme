@@ -197,6 +197,188 @@ def kvantum_svg():
 open(os.path.join(out, "kvantum", "nekozame", "nekozame.svg"), "w").write(kvantum_svg())
 
 
+# the plasma style (panel, popups, tooltips, the task manager, list highlights). plasma
+# cuts each frame into nine named pieces like kvantum ("center", "topleft", or
+# "focus-center" with a prefix); anything not drawn here comes from breeze.
+def nine(prefix, oy, fill, border=None, r=8, opacity=1.0, line=1.0, border_opacity=1.0):
+    """a rounded rect as plasma's nine pieces, at row oy. returns (svg, height used)."""
+    m, ox = 24, 10
+    p = f"{prefix}-" if prefix else ""
+    fo = f' fill-opacity="{opacity}"'
+    cx, cy, rx, by = ox + r, oy + r, ox + r + m, oy + r + m
+    a = r - line / 2
+    bo = f' stroke-opacity="{border_opacity}"'
+    st = (lambda d: f'<path d="{d}" fill="none" stroke="{border}" stroke-width="{line}"{bo}/>') if border else (lambda d: "")
+    ln = (lambda x, y, w, h: f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{border}" fill-opacity="{border_opacity}"/>') if border else (lambda *a: "")
+    h = line
+    pieces = {
+        "topleft": f'<path d="M{cx},{cy} L{cx},{oy} A{r},{r} 0 0 0 {ox},{cy} Z" fill="{fill}"{fo}/>' + st(f"M{cx},{oy + h/2} A{a},{a} 0 0 0 {ox + h/2},{cy}"),
+        "topright": f'<path d="M{rx},{cy} L{rx},{oy} A{r},{r} 0 0 1 {rx + r},{cy} Z" fill="{fill}"{fo}/>' + st(f"M{rx},{oy + h/2} A{a},{a} 0 0 1 {rx + r - h/2},{cy}"),
+        "bottomleft": f'<path d="M{cx},{by} L{ox},{by} A{r},{r} 0 0 0 {cx},{by + r} Z" fill="{fill}"{fo}/>' + st(f"M{ox + h/2},{by} A{a},{a} 0 0 0 {cx},{by + r - h/2}"),
+        "bottomright": f'<path d="M{rx},{by} L{rx + r},{by} A{r},{r} 0 0 1 {rx},{by + r} Z" fill="{fill}"{fo}/>' + st(f"M{rx + r - h/2},{by} A{a},{a} 0 0 1 {rx},{by + r - h/2}"),
+        "top": f'<rect x="{cx}" y="{oy}" width="{m}" height="{r}" fill="{fill}"{fo}/>' + ln(cx, oy, m, h),
+        "bottom": f'<rect x="{cx}" y="{by}" width="{m}" height="{r}" fill="{fill}"{fo}/>' + ln(cx, by + r - h, m, h),
+        "left": f'<rect x="{ox}" y="{cy}" width="{r}" height="{m}" fill="{fill}"{fo}/>' + ln(ox, cy, h, m),
+        "right": f'<rect x="{rx}" y="{cy}" width="{r}" height="{m}" fill="{fill}"{fo}/>' + ln(rx + r - h, cy, h, m),
+        "center": f'<rect x="{cx}" y="{cy}" width="{m}" height="{m}" fill="{fill}"{fo}/>',
+    }
+    svg = "".join(f'<g id="{p}{k}">{v}</g>' for k, v in pieces.items())
+    return svg, 2 * r + m + 10
+
+
+def plasma_svg(frames):
+    """frames: [(prefix, fill, border, r, opacity[, border opacity])], each its own row.
+    the panel also gets mask-* pieces: plasma blurs what's behind it through them."""
+    parts, y = [], 10
+    for prefix, fill_, border, r, opacity, *bo in frames:
+        svg, hgt = nine(prefix, y, fill_, border, r, opacity, border_opacity=bo[0] if bo else 1.0)
+        parts.append(svg)
+        y += hgt
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            "<!-- nekozame for plasma. drawn by generate.py from palette.toml -->\n"
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="80" height="{y}">\n' + "\n".join(parts) + "\n</svg>\n")
+
+
+c = colors
+P = os.path.join(out, "plasma", "nekozame")
+for d in ("widgets", "dialogs"):
+    os.makedirs(os.path.join(P, d), exist_ok=True)
+plasma = {
+    # the panel: plum, softly rounded, a faint pink edge (it floats away from the screen edge)
+    "widgets/panel-background.svg": [("", c["panel"], c["orchid"], 10, 0.96, 0.35),
+                                     ("mask", "#000000", None, 10, 1.0)],
+    # popups (menus, the app launcher, the tray's panels)
+    "dialogs/background.svg": [("", c["panel"], c["raised"], 10, 0.98)],
+    "widgets/tooltip.svg": [("", c["deep"], c["orchid"], 8, 0.98)],
+    "widgets/background.svg": [("", c["panel"], c["raised"], 10, 0.92)],
+    # the task manager: the open app glows pink, hover lilac, attention butter yellow
+    "widgets/tasks.svg": [("normal", "#000000", None, 6, 0.0), ("minimized", "#000000", None, 6, 0.0),
+                          ("focus", c["orchid"], c["orchid"], 6, 0.30), ("hover", c["violet"], None, 6, 0.22),
+                          ("attention", c["butter"], c["butter"], 6, 0.35)],
+    # highlighted rows in lists: the launcher, the tray, settings
+    "widgets/viewitem.svg": [("hover", c["orchid"], None, 6, 0.25), ("selected", c["orchid"], None, 6, 0.55),
+                             ("selected+hover", c["orchid"], None, 6, 0.70)],
+}
+for name, frames in plasma.items():
+    open(os.path.join(P, name), "w").write(plasma_svg(frames))
+# window decorations (kwin's aurorae): a plum title bar with round, mac-style buttons
+# in the palette's pastels. a button is one svg with a piece per state; the title bar
+# is nine pieces per state (active, inactive), like everything else here.
+A = os.path.join(out, "aurorae", "nekozame")
+os.makedirs(A, exist_ok=True)
+
+
+def aurorae_button(color, glyph):
+    """active/hover/pressed: the colour (hover shows the glyph); inactive and
+    deactivated: a muted dot, like a mac's buttons when the window isn't focused."""
+    size, rr = 16, 6.5
+    states = {
+        "active": (color, 1.0, ""),
+        "hover": (color, 1.0, glyph),
+        "pressed": (color, 0.75, glyph),
+        "inactive": (c["dim"], 0.55, ""),
+        "deactivated": (c["dim"], 0.35, ""),
+    }
+    parts = []
+    for i, (state, (col, op, g)) in enumerate(states.items()):
+        x = 10 + i * (size + 10)
+        parts.append(f'<g id="{state}-center" transform="translate({x},10)">'
+                     f'<rect width="{size}" height="{size}" fill="#000000" fill-opacity="0"/>'
+                     f'<circle cx="8" cy="8" r="{rr}" fill="{col}" fill-opacity="{op}"/>{g}</g>')
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<!-- nekozame window button. drawn by generate.py -->\n'
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{10 + 5 * 26}" height="36">\n' + "\n".join(parts) + "\n</svg>\n")
+
+
+ink = c["deep"]
+g = lambda d: f'<path d="{d}" fill="none" stroke="{ink}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
+buttons = {
+    "close": (c["error"], g("M5.5,5.5 L10.5,10.5 M10.5,5.5 L5.5,10.5")),
+    "minimize": (c["butter"], g("M5,8 H11")),
+    "maximize": (c["mint"], g("M8,5 V11 M5,8 H11")),
+    "restore": (c["mint"], g("M5.5,8 H10.5")),
+    "alldesktops": (c["violet"], g("M6,6 h4 v4 h-4 Z")),
+    "keepabove": (c["blue"], g("M5.5,9.5 L8,7 L10.5,9.5")),
+    "keepbelow": (c["blue"], g("M5.5,6.5 L8,9 L10.5,6.5")),
+    "shade": (c["blue"], g("M5,6.5 H11")),
+    "help": (c["blue"], g("M6.3,6.3 a1.8,1.8 0 1 1 2.5,1.6 c-0.6,0.3 -0.8,0.6 -0.8,1.2 M8,11 v0.1")),
+}
+for name, (col, glyph) in buttons.items():
+    open(os.path.join(A, f"{name}.svg"), "w").write(aurorae_button(col, glyph))
+
+# the title bar: rounded on top, square at the bottom where the window's content
+# starts. active: plum; inactive: the darker plum. pink title on the active window
+deco = []
+y = 10
+for prefix, fill_ in (("decoration", c["panel"]), ("decoration-inactive", c["deep"])):
+    svg, hgt = nine(prefix, y, fill_, None, 10, 1.0)
+    # square bottom corners: plasma's bottom corner pieces become plain squares
+    svg = svg.replace(f'<g id="{prefix}-bottomleft">', f'<g id="{prefix}-bottomleft-round" display="none">')
+    svg = svg.replace(f'<g id="{prefix}-bottomright">', f'<g id="{prefix}-bottomright-round" display="none">')
+    by = y + 10 + 24
+    svg += (f'<rect id="{prefix}-bottomleft" x="10" y="{by}" width="10" height="10" fill="{fill_}"/>'
+            f'<rect id="{prefix}-bottomright" x="44" y="{by}" width="10" height="10" fill="{fill_}"/>')
+    deco.append(svg)
+    y += hgt
+open(os.path.join(A, "decoration.svg"), "w").write(
+    '<?xml version="1.0" encoding="UTF-8"?>\n<!-- nekozame window frame. drawn by generate.py -->\n'
+    f'<svg xmlns="http://www.w3.org/2000/svg" width="80" height="{y}">\n' + "\n".join(deco) + "\n</svg>\n")
+open(os.path.join(A, "nekozamerc"), "w").write(f"""[General]
+ActiveTextColor={",".join(map(str, rgb(c["orchid"])))}
+InactiveTextColor={",".join(map(str, rgb(c["dim"])))}
+TitleAlignment=Center
+TitleVerticalAlignment=Center
+Animation=150
+DecorationPosition=0
+UseTextShadow=false
+
+[Layout]
+BorderLeft=1
+BorderRight=1
+BorderBottom=1
+TitleEdgeTop=6
+TitleEdgeBottom=6
+TitleEdgeLeft=10
+TitleEdgeRight=10
+TitleBorderLeft=6
+TitleBorderRight=6
+TitleHeight=20
+ButtonWidth=16
+ButtonHeight=16
+ButtonSpacing=6
+ButtonMarginTop=0
+ExplicitButtonSpacer=10
+PaddingTop=0
+PaddingBottom=0
+PaddingLeft=0
+PaddingRight=0
+""")
+open(os.path.join(A, "metadata.desktop"), "w").write("""[Desktop Entry]
+Name=nekozame
+Comment=nekozame: a plum title bar with round, mac-style buttons in pastels
+X-KDE-PluginInfo-Author=purplekairi1312
+X-KDE-PluginInfo-Name=nekozame
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=CC-BY-NC-SA-4.0
+X-KDE-PluginInfo-Website=https://github.com/purplekairi1312/nekozame-theme
+X-Plasma-API=declarativeappletscript
+""")
+
+# the theme's own colors (the same as kde/nekozame.colors), and what kde lists it as
+shutil.copy(os.path.join(out, "kde", "nekozame.colors"), os.path.join(P, "colors"))
+open(os.path.join(P, "metadata.json"), "w").write("""{
+    "KPlugin": {
+        "Authors": [{ "Name": "purplekairi1312" }],
+        "Description": "nekozame: soft violet-gray with pastel pink",
+        "Id": "nekozame",
+        "License": "CC-BY-NC-SA-4.0",
+        "Name": "nekozame",
+        "Website": "https://github.com/purplekairi1312/nekozame-theme"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
+""")
+
+
 def png(path, color, size=20):
     """a solid square, written with nothing but the standard library."""
     row = b"\x00" + bytes(rgb(color)) * size

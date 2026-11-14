@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=nekozame
+Comment=nekozame: a plum title bar with round, mac-style buttons in pastels
+X-KDE-PluginInfo-Author=purplekairi1312
+X-KDE-PluginInfo-Name=nekozame
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=CC-BY-NC-SA-4.0
+X-KDE-PluginInfo-Website=https://github.com/purplekairi1312/nekozame-theme
+X-Plasma-API=declarativeappletscript
