@@ -363,6 +363,9 @@ X-KDE-PluginInfo-Website=https://github.com/purplekairi1312/nekozame-theme
 X-Plasma-API=declarativeappletscript
 """)
 
+# css loader (decky) gets the same steam theme next to its theme.json
+shutil.copy(os.path.join(out, "steam", "nekozame.css"), os.path.join(out, "css-loader", "nekozame", "nekozame.css"))
+
 # the pointer: the trans flag, glossy like the bubble logo (cursors.py draws it)
 import cursors  # noqa: E402
 cursors.build(os.path.join(out, "cursors", "nekozame"))

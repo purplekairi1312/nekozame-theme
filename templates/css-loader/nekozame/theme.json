@@ -1,0 +1,11 @@
+{
+    "name": "nekozame",
+    "author": "purplekairi1312",
+    "version": "v1.0",
+    "description": "nekozame: soft violet-gray with pastel pink, from nekozame os. Swaps Steam's own colors, so it lasts through updates.",
+    "target": "System-Wide",
+    "manifest_version": 8,
+    "inject": {
+        "nekozame.css": ["bigpicture", "QuickAccess", "MainMenu", "notificationtoasts.*", "store"]
+    }
+}

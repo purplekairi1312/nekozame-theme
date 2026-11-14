@@ -1,0 +1,47 @@
+/* nekozame for steam (game mode, big picture, its menus and the store). generated
+   from palette.toml by generate.py; edit the palette there. it only swaps steam's own
+   color variables, so it lasts through steam updates. nekozame os injects it by
+   itself (nekozame-steam-theme); elsewhere, css-loader/nekozame is the same theme
+   for css loader (decky). */
+:root {
+    --gpSystemDarkestGrey: #3a3249;
+    --gpSystemDarkerGrey: #433a55;
+    --gpSystemDarkGrey: #4f4562;
+    --gpSystemGrey: #685c7f;
+    --gpSystemLightGrey: #a094b8;
+    --gpSystemLighterGrey: #b3a7cb;
+    --gpSystemLightestGrey: #e8def5;
+
+    --gpStoreDarkestGrey: #3a3249;
+    --gpStoreDarkerGrey: #433a55;
+    --gpStoreDarkGrey: #4f4562;
+    --gpStoreGrey: #685c7f;
+    --gpStoreLightGrey: #a094b8;
+    --gpStoreLighterGrey: #b3a7cb;
+    --gpStoreLightestGrey: #e8def5;
+
+    --gpColor-Blue: #ffc0e5;
+    --gpColor-BlueHi: #ffd4ee;
+    --gpColor-LightBlue: #ffd4ee;
+    --gpColor-ChalkyBlue: #ffc6ea;
+    --gpColor-DustyBlue: #8a76a8;
+    --gpColor-Green: #c8f7dc;
+    --gpColor-GreenHi: #dcf8bc;
+    --gpColor-Red: #ffb3c8;
+    --gpColor-RedHi: #ffc0d2;
+    --gpColor-Orange: #ffd2b8;
+    --gpColor-Yellow: #fff1b0;
+
+    --gpBackground-DarkHard: #3a3249cc;
+    --gpBackground-DarkMedium: #3a324999;
+    --gpBackground-DarkSoft: #3a324966;
+    --gpBackground-DarkSofter: #3a324933;
+    --gpBackground-LightHard: #ffc0e580;
+    --gpBackground-LightHarder: #ffc0e5a6;
+    --gpBackground-LightMedium: #e3ccff70;
+    --gpBackground-LightSoft: #685c7f80;
+    --gpBackground-LightSofter: #e3ccff24;
+
+    --gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px, #5a4f6e 0%, #433a55 80%);
+    --gpGradient-StoreBackground: linear-gradient(180deg, #4f4562 0%, #433a55 80%);
+}
