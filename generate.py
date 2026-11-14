@@ -363,6 +363,10 @@ X-KDE-PluginInfo-Website=https://github.com/purplekairi1312/nekozame-theme
 X-Plasma-API=declarativeappletscript
 """)
 
+# the pointer: the trans flag, glossy like the bubble logo (cursors.py draws it)
+import cursors  # noqa: E402
+cursors.build(os.path.join(out, "cursors", "nekozame"))
+
 # the theme's own colors (the same as kde/nekozame.colors), and what kde lists it as
 shutil.copy(os.path.join(out, "kde", "nekozame.colors"), os.path.join(P, "colors"))
 open(os.path.join(P, "metadata.json"), "w").write("""{

@@ -51,6 +51,7 @@ Everything is in [`themes/`](themes).
 | yazi | `yazi/theme.toml` | `~/.config/yazi/theme.toml` |
 | KDE Plasma style (panel, popups, tooltips, task manager) | `plasma/nekozame/` | `~/.local/share/plasma/desktoptheme/`, then System Settings → Plasma Style |
 | KDE window decorations (round, mac-style buttons) | `aurorae/nekozame/` | `~/.local/share/aurorae/themes/`, then System Settings → Window Decorations; buttons on the left: close, minimize, maximize |
+| The pointer (the trans flag, glossy like the bubble) | `cursors/nekozame/` | `~/.local/share/icons/nekozame-cursors/`, then pick it under Pointers / cursor theme |
 | Konsole | `konsole/nekozame.colorscheme` | `~/.local/share/konsole/` |
 | VS Code | `vscode/` | copy the folder to `~/.vscode/extensions/purplekairi1312.nekozame-1.0.0` |
 | btop | `btop/nekozame.theme` | `~/.config/btop/themes/`, then `color_theme = "nekozame"` |
