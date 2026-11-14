@@ -1,0 +1,96 @@
+# nekozame for yazi. generated from palette.toml by generate.py; edit the
+# palette there. goes in ~/.config/yazi/theme.toml. only what differs from
+# yazi's own theme is here; the background stays see-through
+
+[mgr]
+cwd = { fg = "{{orchid}}", bold = true }
+find_keyword  = { fg = "{{butter}}", bold = true, italic = true, underline = true }
+find_position = { fg = "{{orchid}}", bg = "reset", bold = true, italic = true }
+marker_copied   = { fg = "{{mint}}", bg = "{{mint}}" }
+marker_cut      = { fg = "{{rose}}", bg = "{{rose}}" }
+marker_marked   = { fg = "{{blue}}", bg = "{{blue}}" }
+marker_selected = { fg = "{{butter}}", bg = "{{butter}}" }
+count_copied   = { fg = "{{deep}}", bg = "{{mint}}" }
+count_cut      = { fg = "{{deep}}", bg = "{{rose}}" }
+count_selected = { fg = "{{deep}}", bg = "{{butter}}" }
+border_style  = { fg = "#7a6e90" }
+
+[indicator]
+parent  = { fg = "{{deep}}", bg = "{{dim}}" }
+current = { fg = "{{deep}}", bg = "{{orchid}}", bold = true }
+preview = { fg = "{{orchid}}", underline = true }
+
+[tabs]
+active   = { fg = "{{deep}}", bg = "{{orchid}}", bold = true }
+inactive = { fg = "{{orchid}}", bg = "{{panel}}" }
+
+[mode]
+normal_main = { fg = "{{deep}}", bg = "{{orchid}}", bold = true }
+normal_alt  = { fg = "{{orchid}}", bg = "{{panel}}" }
+select_main = { fg = "{{deep}}", bg = "{{violet}}", bold = true }
+select_alt  = { fg = "{{violet}}", bg = "{{panel}}" }
+unset_main  = { fg = "{{deep}}", bg = "{{rose}}", bold = true }
+unset_alt   = { fg = "{{rose}}", bg = "{{panel}}" }
+
+[status]
+perm_sep   = { fg = "#7a6e90" }
+perm_type  = { fg = "{{mint}}" }
+perm_read  = { fg = "{{butter}}" }
+perm_write = { fg = "{{rose}}" }
+perm_exec  = { fg = "{{blue}}" }
+progress_normal = { fg = "{{orchid}}", bg = "{{panel}}" }
+progress_error  = { fg = "{{rose}}", bg = "{{panel}}" }
+
+[which]
+border = { fg = "{{orchid}}" }
+cand   = { fg = "{{blue}}" }
+rest   = { fg = "{{dim}}" }
+desc   = { fg = "{{orchid}}" }
+separator_style = { fg = "#7a6e90" }
+
+[confirm]
+border = { fg = "{{orchid}}" }
+title  = { fg = "{{orchid}}" }
+
+[spot]
+border   = { fg = "{{orchid}}" }
+title    = { fg = "{{orchid}}" }
+tbl_col  = { fg = "{{blue}}" }
+tbl_cell = { fg = "{{orchid}}", reversed = true }
+
+[notify]
+title_info  = { fg = "{{mint}}" }
+title_warn  = { fg = "{{butter}}" }
+title_error = { fg = "{{rose}}" }
+
+[pick]
+border = { fg = "{{orchid}}" }
+active = { fg = "{{orchid}}", bold = true }
+
+[input]
+border = { fg = "{{orchid}}" }
+
+[cmp]
+border = { fg = "{{orchid}}" }
+
+[tasks]
+border  = { fg = "{{orchid}}" }
+hovered = { fg = "{{orchid}}", bold = true }
+
+[help]
+border = { fg = "{{orchid}}" }
+chord  = { fg = "{{blue}}" }
+
+[filetype]
+rules = [
+	{ mime = "**/image/*", fg = "{{butter}}" },
+	{ mime = "**/{audio,video}/*", fg = "{{violet}}" },
+	{ mime = "**/application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "{{peach}}" },
+	{ mime = "**/application/{pdf,doc,rtf}", fg = "{{mint}}" },
+	{ mime = "vfs/{absent,stale}", fg = "#7a6e90" },
+	{ url = "*", is = "orphan", bg = "{{rose}}" },
+	{ url = "*", is = "exec", fg = "{{green}}" },
+	{ url = "*", is = "dummy", bg = "{{rose}}" },
+	{ url = "*/", is = "dummy", bg = "{{rose}}" },
+	{ url = "*/", fg = "{{blue}}", bold = true },
+]
