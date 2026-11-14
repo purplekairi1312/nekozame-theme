@@ -45,6 +45,9 @@ Everything is in [`themes/`](themes).
 | Doom Emacs | `emacs/nekozame-theme.el` | `~/.config/doom/themes/`, then `(setq doom-theme 'nekozame)` |
 | Ghostty | `ghostty/nekozame` | `~/.config/ghostty/themes/`, then `theme = nekozame` |
 | KDE Plasma | `kde/nekozame.colors` | `~/.local/share/color-schemes/`, then System Settings → Colors |
+| GTK 3 and 4 (libadwaita) apps | `gtk/gtk-3.0/gtk.css`, `gtk/gtk-4.0/gtk.css` | `~/.config/gtk-3.0/` and `~/.config/gtk-4.0/`, with the dark style on (`gsettings set org.gnome.desktop.interface color-scheme prefer-dark`); for GTK 3, the adw-gtk3-dark theme takes all of it |
+| Qt apps (Kvantum) | `kvantum/nekozame/` | `~/.config/Kvantum/`, then `kvantummanager --set nekozame` and Kvantum as the Qt style |
+| Qt apps outside KDE (qt6ct, qt5ct) | `qt/nekozame.conf` | `~/.config/qt6ct/colors/` (and `qt5ct/colors/`), then pick it in qt6ct |
 | Konsole | `konsole/nekozame.colorscheme` | `~/.local/share/konsole/` |
 | VS Code | `vscode/` | copy the folder to `~/.vscode/extensions/purplekairi1312.nekozame-1.0.0` |
 | btop | `btop/nekozame.theme` | `~/.config/btop/themes/`, then `color_theme = "nekozame"` |

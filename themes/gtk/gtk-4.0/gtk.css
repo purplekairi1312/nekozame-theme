@@ -1,0 +1,66 @@
+/* nekozame for gtk 4 and libadwaita apps. generated from palette.toml by
+   generate.py; edit the palette there. goes in ~/.config/gtk-4.0/gtk.css,
+   with the dark style on (gsettings set org.gnome.desktop.interface
+   color-scheme prefer-dark) */
+
+@define-color accent_color #ffc0e5;
+@define-color accent_bg_color #ffc0e5;
+@define-color accent_fg_color #433a55;
+
+@define-color destructive_color #ffb3c8;
+@define-color destructive_bg_color #ffb3c8;
+@define-color destructive_fg_color #433a55;
+
+@define-color success_color #c8f7dc;
+@define-color success_bg_color #c8f7dc;
+@define-color success_fg_color #433a55;
+
+@define-color warning_color #fff1b0;
+@define-color warning_bg_color #fff1b0;
+@define-color warning_fg_color #433a55;
+
+@define-color error_color #ffb3c8;
+@define-color error_bg_color #ffb3c8;
+@define-color error_fg_color #433a55;
+
+@define-color window_bg_color #4f4562;
+@define-color window_fg_color #ffffff;
+
+@define-color view_bg_color #5a4f6e;
+@define-color view_fg_color #ffffff;
+
+@define-color headerbar_bg_color #433a55;
+@define-color headerbar_fg_color #ffffff;
+@define-color headerbar_border_color #ffc0e5;
+@define-color headerbar_backdrop_color #433a55;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.25);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.4);
+
+@define-color sidebar_bg_color #433a55;
+@define-color sidebar_fg_color #ffffff;
+@define-color sidebar_backdrop_color #433a55;
+@define-color sidebar_border_color #685c7f;
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
+
+@define-color secondary_sidebar_bg_color #4f4562;
+@define-color secondary_sidebar_fg_color #ffffff;
+@define-color secondary_sidebar_backdrop_color #4f4562;
+@define-color secondary_sidebar_border_color #685c7f;
+@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.25);
+
+@define-color card_bg_color #685c7f;
+@define-color card_fg_color #ffffff;
+@define-color card_shade_color rgba(0, 0, 0, 0.3);
+
+@define-color dialog_bg_color #4f4562;
+@define-color dialog_fg_color #ffffff;
+
+@define-color popover_bg_color #4f4562;
+@define-color popover_fg_color #ffffff;
+@define-color popover_shade_color rgba(0, 0, 0, 0.25);
+
+@define-color thumbnail_bg_color #685c7f;
+@define-color thumbnail_fg_color #ffffff;
+
+@define-color shade_color rgba(0, 0, 0, 0.25);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
