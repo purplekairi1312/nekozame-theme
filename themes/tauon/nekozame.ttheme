@@ -1,8 +1,8 @@
 # Tauon Music Box theme file
 # nekozame, by purplekairi1312. generated from palette.toml by generate.py; edit the
-# palette there. goes in tauon's theme folder (~/.local/share/TauonMusicBox/theme/,
-# the flatpak's ~/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/theme/,
-# on a mac ~/Library/Application Support/TauonMusicBox/theme/)
+# palette there. goes in tauon's theme folder: ~/.local/share/TauonMusicBox/theme/
+# on linux and macs, ~/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/theme/
+# for the flatpak
 
 
 #-Backgrounds-----
