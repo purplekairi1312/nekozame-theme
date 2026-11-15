@@ -1,6 +1,7 @@
 /* nekozame for steam (game mode, big picture, its menus and the store). generated
-   from palette.toml by generate.py; edit the palette there. it only swaps steam's own
-   color variables, so it lasts through steam updates. nekozame os injects it by
+   from palette.toml by generate.py; edit the palette there. it swaps steam's own
+   color variables; nekozame.js next to it does the rest (steam colours most things
+   itself), and css loader users get this part. nekozame os injects it by
    itself (nekozame-steam-theme); elsewhere, css-loader/nekozame is the same theme
    for css loader (decky). */
 :root:root {  /* doubled: wins over steam's own :root, whatever loads after */
@@ -83,18 +84,4 @@
     --virtualmenu-bg-hover: {{raised}};
     --touchmenuicon-bg: {{deep}};
     --touchmenuicon-fg: {{dim}};
-}
-
-/* steam colours most things itself now (game mode and the desktop client alike), not
-   through the variables above. turning every hue makes its blue pink and its navy
-   greys plum; pictures, videos and game art are turned back, so they keep their own
-   colours */
-html {
-    filter: hue-rotate(88deg) saturate(0.9) brightness(1.45);
-}
-img,
-video,
-canvas,
-[style*="background-image"] {
-    filter: brightness(0.69) saturate(1.11) hue-rotate(-88deg);
 }
