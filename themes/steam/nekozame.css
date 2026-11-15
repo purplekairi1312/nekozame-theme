@@ -85,16 +85,16 @@
     --touchmenuicon-fg: #b3a7cb;
 }
 
-/* the desktop client colours most things itself instead of through variables. turning
-   every hue there makes steam's blue pink and its navy greys plum; pictures, videos
-   and game art are turned back, so they keep their own colours. only the desktop
-   client (body.DesktopUI), not game mode */
-html:has(> body.DesktopUI) {
+/* steam colours most things itself now (game mode and the desktop client alike), not
+   through the variables above. turning every hue makes its blue pink and its navy
+   greys plum; pictures, videos and game art are turned back, so they keep their own
+   colours */
+html {
     filter: hue-rotate(88deg) saturate(0.9) brightness(1.45);
 }
-html:has(> body.DesktopUI) img,
-html:has(> body.DesktopUI) video,
-html:has(> body.DesktopUI) canvas,
-html:has(> body.DesktopUI) [style*="background-image"] {
+img,
+video,
+canvas,
+[style*="background-image"] {
     filter: brightness(0.69) saturate(1.11) hue-rotate(-88deg);
 }
