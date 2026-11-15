@@ -240,24 +240,34 @@ def plasma_svg(frames):
 
 
 c = colors
+
+
+def mix(a, b, t):
+    """a with t of b over it, as one solid colour (see-through pieces leave seams)."""
+    ra, rb = rgb(a), rgb(b)
+    return "#%02x%02x%02x" % tuple(round(x + (y - x) * t) for x, y in zip(ra, rb))
+
+
 P = os.path.join(out, "plasma", "nekozame")
 for d in ("widgets", "dialogs"):
     os.makedirs(os.path.join(P, d), exist_ok=True)
 plasma = {
     # the panel: plum, softly rounded, a faint pink edge (it floats away from the screen edge)
-    "widgets/panel-background.svg": [("", c["panel"], c["orchid"], 10, 0.96, 0.35),
+    "widgets/panel-background.svg": [("", c["panel"], mix(c["panel"], c["orchid"], 0.35), 10, 1.0),
                                      ("mask", "#000000", None, 10, 1.0)],
     # popups (menus, the app launcher, the tray's panels)
-    "dialogs/background.svg": [("", c["panel"], c["raised"], 10, 0.98)],
-    "widgets/tooltip.svg": [("", c["deep"], c["orchid"], 8, 0.98)],
-    "widgets/background.svg": [("", c["panel"], c["raised"], 10, 0.92)],
+    "dialogs/background.svg": [("", c["panel"], c["raised"], 10, 1.0)],
+    "widgets/tooltip.svg": [("", c["deep"], c["orchid"], 8, 1.0)],
+    "widgets/background.svg": [("", c["panel"], c["raised"], 10, 1.0)],
     # the task manager: the open app glows pink, hover lilac, attention butter yellow
     "widgets/tasks.svg": [("normal", "#000000", None, 6, 0.0), ("minimized", "#000000", None, 6, 0.0),
-                          ("focus", c["orchid"], c["orchid"], 6, 0.30), ("hover", c["violet"], None, 6, 0.22),
-                          ("attention", c["butter"], c["butter"], 6, 0.35)],
+                          ("focus", mix(c["panel"], c["orchid"], 0.30), c["orchid"], 6, 1.0),
+                          ("hover", mix(c["panel"], c["violet"], 0.22), None, 6, 1.0),
+                          ("attention", mix(c["panel"], c["butter"], 0.35), c["butter"], 6, 1.0)],
     # highlighted rows in lists: the launcher, the tray, settings
-    "widgets/viewitem.svg": [("hover", c["orchid"], None, 6, 0.25), ("selected", c["orchid"], None, 6, 0.55),
-                             ("selected+hover", c["orchid"], None, 6, 0.70)],
+    "widgets/viewitem.svg": [("hover", mix(c["panel"], c["orchid"], 0.25), None, 6, 1.0),
+                             ("selected", mix(c["panel"], c["orchid"], 0.55), None, 6, 1.0),
+                             ("selected+hover", mix(c["panel"], c["orchid"], 0.70), None, 6, 1.0)],
 }
 for name, frames in plasma.items():
     open(os.path.join(P, name), "w").write(plasma_svg(frames))

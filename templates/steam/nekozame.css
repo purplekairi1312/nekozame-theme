@@ -3,7 +3,7 @@
    color variables, so it lasts through steam updates. nekozame os injects it by
    itself (nekozame-steam-theme); elsewhere, css-loader/nekozame is the same theme
    for css loader (decky). */
-:root {
+:root:root {  /* doubled: wins over steam's own :root, whatever loads after */
     --gpSystemDarkestGrey: #3a3249;
     --gpSystemDarkerGrey: {{deep}};
     --gpSystemDarkGrey: {{panel}};
@@ -44,4 +44,43 @@
 
     --gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px, {{bg}} 0%, {{deep}} 80%);
     --gpGradient-StoreBackground: linear-gradient(180deg, {{panel}} 0%, {{deep}} 80%);
+
+    /* the desktop client and newer parts of steam: its colour scales. greyneutral is
+       steam's grey (plum here), blue is the accent (pink here) */
+    --color-greyneutral-1: #2a2435;
+    --color-greyneutral-2: #2f2839;
+    --color-greyneutral-3: #342c40;
+    --color-greyneutral-4: #3a3249;
+    --color-greyneutral-5: #3e3550;
+    --color-greyneutral-6: {{deep}};
+    --color-greyneutral-7: {{panel}};
+    --color-greyneutral-8: {{bg}};
+    --color-greyneutral-9: {{raised}};
+    --color-greyneutral-10: #7a6e90;
+    --color-greyneutral-11: {{linenum}};
+    --color-greyneutral-12: {{dim}};
+    --color-blue-1: #2e2232;
+    --color-blue-2: #36263b;
+    --color-blue-3: #4a2d4a;
+    --color-blue-4: #5c3458;
+    --color-blue-5: #6e3c66;
+    --color-blue-6: #844676;
+    --color-blue-7: #a35a90;
+    --color-blue-8: {{orchid}};
+    --color-blue-9: {{error}};
+    --color-blue-10: {{link}};
+    --color-blue-11: {{pink}};
+    --color-blue-12: #ffe6f4;
+    --color-accent-contrast: {{deep}};
+    --color-text-light-title: {{fg}};
+    --color-text-light-subtitle: {{lavender}};
+    --color-text-light-body: {{muted}};
+    --color-text-light-description: {{dim}};
+    --color-text-light-note: {{linenum}};
+    --virtualmenu-accent: {{orchid}};
+    --virtualmenupointer-color: {{orchid}};
+    --virtualmenu-bg: {{deep}};
+    --virtualmenu-bg-hover: {{raised}};
+    --touchmenuicon-bg: {{deep}};
+    --touchmenuicon-fg: {{dim}};
 }
