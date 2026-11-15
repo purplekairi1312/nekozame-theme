@@ -49,6 +49,7 @@ Everything is in [`themes/`](themes).
 | Qt apps (Kvantum) | `kvantum/nekozame/` | `~/.config/Kvantum/`, then `kvantummanager --set nekozame` and Kvantum as the Qt style |
 | Qt apps outside KDE (qt6ct, qt5ct) | `qt/nekozame.conf` | `~/.config/qt6ct/colors/` (and `qt5ct/colors/`), then pick it in qt6ct |
 | yazi | `yazi/theme.toml` | `~/.config/yazi/theme.toml` |
+| Tauon Music Box | `tauon/nekozame.ttheme` | Tauon's `theme/` folder (see the file), then pick it in Tauon's settings |
 | KDE Plasma style (panel, popups, tooltips, task manager) | `plasma/nekozame/` | `~/.local/share/plasma/desktoptheme/`, then System Settings → Plasma Style |
 | KDE window decorations (round, mac-style buttons) | `aurorae/nekozame/` | `~/.local/share/aurorae/themes/`, then System Settings → Window Decorations; buttons on the left: close, minimize, maximize |
 | The pointer (the trans flag, glossy like the bubble) | `cursors/nekozame/` | `~/.local/share/icons/nekozame-cursors/`, then pick it under Pointers / cursor theme |

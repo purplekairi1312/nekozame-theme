@@ -1,0 +1,123 @@
+# Tauon Music Box theme file
+# nekozame, by purplekairi1312. generated from palette.toml by generate.py; edit the
+# palette there. goes in tauon's theme folder (~/.local/share/TauonMusicBox/theme/,
+# the flatpak's ~/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/theme/,
+# on a mac ~/Library/Application Support/TauonMusicBox/theme/)
+
+
+#-Backgrounds-----
+
+{{deep|rgb}}        player background (top panel)
+{{bg|rgb}}        playlist panel
+{{panel|rgb}}        side panel
+{{deep|rgb}}        bottom panel
+{{bg|rgb}}        gallery background
+{{panel|rgb}}        queue panel
+
+#-Frame--------
+
+{{raised|rgb}}       sep line
+{{raised|rgb}}       bb line
+{{raised|rgb}}       tb line
+
+#-Playlist-------
+
+{{muted|rgb}}     track line
+{{dim|rgb}}     track time
+{{linenum|rgb}}     track index
+{{dim|rgb}}     track artist
+{{muted|rgb}}     album line
+
+{{orchid|rgb}}     track playing
+{{orchid|rgb}}     index playing
+{{pink|rgb}}     artist playing
+{{pink|rgb}}     album playing
+{{orchid|rgb}}     time playing
+
+{{linenum|rgb}}        track missing
+
+{{rose|rgb}}     fav line
+{{raised|rgb}}        folder line
+{{violet|rgb}}     folder title
+
+255,192,229,22   playing highlight
+255,192,229,34   select highlight
+{{orchid|rgb}}     gallery highlight
+
+#-Bottom panel------
+
+{{raised|rgb}}        buttons off
+{{pink|rgb}}     buttons over
+{{orchid|rgb}}     buttons active
+
+{{orchid|rgb}}     playing time
+
+{{orchid|rgb}}     seek bar
+{{panel|rgb}}        seek bg
+{{violet|rgb}}     volume bar
+{{panel|rgb}}        volume bg
+{{raised|rgb}}        scroll bar
+
+{{raised|rgb}}        mode off
+{{pink|rgb}}     mode over
+{{orchid|rgb}}     mode on
+
+{{pinktext|rgb}}     bottom title
+
+#-Menu-------------
+{{panel|rgb}}        menu background
+{{raised|rgb}}        menu highlight
+{{raised|rgb}}        menu border
+{{fg|rgb}}     menu text
+{{linenum|rgb}}        menu disable text
+{{dim|rgb}}        menu icons
+
+#-Top panel---------
+
+{{orchid|rgb}}     tab active line
+{{raised|rgb}}     tab line
+{{deep|rgb}}        tab background
+{{raised|rgb}}        tab over
+{{panel|rgb}}        tab active background
+{{orchid|rgb}}     music vis
+
+67,58,85,7      window buttons background
+
+#-Side panel--------
+
+{{fg|rgb}}     title info
+{{muted|rgb}}     extra info
+{{deep|rgb}}        art border
+
+#-Dialog box---------
+
+{{panel|rgb}}        box background
+{{raised|rgb}}        box border
+
+{{orchid|rgb}}     box title text
+{{dim|rgb}}     box text label
+
+{{fg|rgb}}     box text normal
+{{muted|rgb}}     box sub text
+{{fg|rgb}}     box input text
+{{raised|rgb}}        box text border
+
+{{fg|rgb}}     box button text normal
+{{deep|rgb}}     box button text highlight
+{{raised|rgb}}        box button background normal
+{{orchid|rgb}}        box button background highlight
+{{raised|rgb}}        box button border
+
+#-Misc--------------
+
+{{deep|rgb}}        playlist box background
+67,58,85,8      window frame
+{{panel|rgb}}        artist bio background
+{{muted|rgb}}     artist bio text
+
+#-Mini Mode---------
+
+67,58,85,8      mini bg
+{{raised|rgb}}        mini border
+{{muted|rgb}}     mini text 1
+{{orchid|rgb}}     mini text 2

@@ -1,0 +1,123 @@
+# Tauon Music Box theme file
+# nekozame, by purplekairi1312. generated from palette.toml by generate.py; edit the
+# palette there. goes in tauon's theme folder (~/.local/share/TauonMusicBox/theme/,
+# the flatpak's ~/.var/app/com.github.taiko2k.tauonmb/data/TauonMusicBox/theme/,
+# on a mac ~/Library/Application Support/TauonMusicBox/theme/)
+
+
+#-Backgrounds-----
+
+67,58,85        player background (top panel)
+90,79,110        playlist panel
+79,69,98        side panel
+67,58,85        bottom panel
+90,79,110        gallery background
+79,69,98        queue panel
+
+#-Frame--------
+
+104,92,127       sep line
+104,92,127       bb line
+104,92,127       tb line
+
+#-Playlist-------
+
+232,222,245     track line
+179,167,203     track time
+160,148,184     track index
+179,167,203     track artist
+232,222,245     album line
+
+255,192,229     track playing
+255,192,229     index playing
+255,212,238     artist playing
+255,212,238     album playing
+255,192,229     time playing
+
+160,148,184        track missing
+
+255,192,210     fav line
+104,92,127        folder line
+227,204,255     folder title
+
+255,192,229,22   playing highlight
+255,192,229,34   select highlight
+255,192,229     gallery highlight
+
+#-Bottom panel------
+
+104,92,127        buttons off
+255,212,238     buttons over
+255,192,229     buttons active
+
+255,192,229     playing time
+
+255,192,229     seek bar
+79,69,98        seek bg
+227,204,255     volume bar
+79,69,98        volume bg
+104,92,127        scroll bar
+
+104,92,127        mode off
+255,212,238     mode over
+255,192,229     mode on
+
+255,217,239     bottom title
+
+#-Menu-------------
+79,69,98        menu background
+104,92,127        menu highlight
+104,92,127        menu border
+255,255,255     menu text
+160,148,184        menu disable text
+179,167,203        menu icons
+
+#-Top panel---------
+
+255,192,229     tab active line
+104,92,127     tab line
+67,58,85        tab background
+104,92,127        tab over
+79,69,98        tab active background
+255,192,229     music vis
+
+67,58,85,7      window buttons background
+
+#-Side panel--------
+
+255,255,255     title info
+232,222,245     extra info
+67,58,85        art border
+
+#-Dialog box---------
+
+79,69,98        box background
+104,92,127        box border
+
+255,192,229     box title text
+179,167,203     box text label
+
+255,255,255     box text normal
+232,222,245     box sub text
+255,255,255     box input text
+104,92,127        box text border
+
+255,255,255     box button text normal
+67,58,85     box button text highlight
+104,92,127        box button background normal
+255,192,229        box button background highlight
+104,92,127        box button border
+
+#-Misc--------------
+
+67,58,85        playlist box background
+67,58,85,8      window frame
+79,69,98        artist bio background
+232,222,245     artist bio text
+
+#-Mini Mode---------
+
+67,58,85,8      mini bg
+104,92,127        mini border
+232,222,245     mini text 1
+255,192,229     mini text 2
