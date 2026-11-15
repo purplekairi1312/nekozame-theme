@@ -109,19 +109,27 @@
     return css.replace(/([\w-]+)(\s*:\s*)([^;{}]+)/g, (m, prop, sep, val) =>
       COLOR.test(val) ? (COLOR.lastIndex = 0, prop + sep + swapValue(val, TEXTY.test(prop))) : (COLOR.lastIndex = 0, m));
   }
-  const fetching = new Set();
-  function copyOf(sheet) {
-    const href = sheet.href;
-    if (!href || fetching.has(href) || !sheet.ownerNode) return;
-    fetching.add(href);
-    fetch(href).then((r) => r.text()).then((css) => {
+  const fetching = new Set(), unreadable = new Set();
+  function swapIn(href, css) {
+    for (const sheet of document.styleSheets) {
+      if (sheet.href !== href || sheet.disabled || !sheet.ownerNode) continue;
       const style = document.createElement("style");
       style.dataset.nekozame = href;
       style.textContent = swapText(css, href);
       sheet.ownerNode.after(style);
       sheet.disabled = true;
-    }).catch(() => {});
+    }
   }
+  function copyOf(sheet) {
+    const href = sheet.href;
+    if (!href || fetching.has(href) || !sheet.ownerNode) return;
+    fetching.add(href);
+    // the cdn doesn't always let pages fetch it; then nekozame-steam-theme fetches it
+    // from outside the page and hands it over (window.__nekozameCopy)
+    fetch(href).then((r) => r.text()).then((css) => swapIn(href, css)).catch(() => unreadable.add(href));
+  }
+  window.__nekozameUnreadable = () => [...unreadable];
+  window.__nekozameCopy = (href, css) => { unreadable.delete(href); swapIn(href, css); };
 
   const done = new WeakSet();
   function sweep() {
