@@ -81,15 +81,21 @@ def kvantum_svg():
         stroke = lambda d: f'<path d="{d}" fill="none" stroke="{border}" stroke-width="1"/>' if border else ""
         line = lambda x, y, w, h: f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{border}"/>' if border else ""
         a = f - 0.5
+        def corner(x0, y0, sx, sy):
+            """a quarter disc in the f x f square; a border is a filled quarter ring, so
+            nothing sticks out of the piece (a stroke's half-width shows as seams)."""
+            ccx, ccy = (x0 + f if sx < 0 else x0), (y0 + f if sy < 0 else y0)
+            sweep = 1 if sx * sy < 0 else 0
+            q = lambda rad, col, attr: (f'<path d="M{ccx},{ccy} L{ccx},{ccy + sy * rad} A{rad},{rad} 0 0 {sweep} '
+                                        f'{ccx + sx * rad},{ccy} Z" fill="{col}"{attr}/>')
+            if border:
+                return q(f, border, "") + q(f - 1, fill, op)
+            return q(f, fill, op)
         pieces = {
-            "topleft": f'<path d="M{cx},{cy} L{cx},{oy} A{f},{f} 0 0 0 {ox},{cy} Z" fill="{fill}"{op}/>'
-                       + stroke(f"M{cx},{oy + .5} A{a},{a} 0 0 0 {ox + .5},{cy}"),
-            "topright": f'<path d="M{rx},{cy} L{rx},{oy} A{f},{f} 0 0 1 {rx + f},{cy} Z" fill="{fill}"{op}/>'
-                        + stroke(f"M{rx},{oy + .5} A{a},{a} 0 0 1 {rx + f - .5},{cy}"),
-            "bottomleft": f'<path d="M{cx},{by} L{ox},{by} A{f},{f} 0 0 0 {cx},{by + f} Z" fill="{fill}"{op}/>'
-                          + stroke(f"M{ox + .5},{by} A{a},{a} 0 0 0 {cx},{by + f - .5}"),
-            "bottomright": f'<path d="M{rx},{by} L{rx + f},{by} A{f},{f} 0 0 1 {rx},{by + f} Z" fill="{fill}"{op}/>'
-                           + stroke(f"M{rx + f - .5},{by} A{a},{a} 0 0 1 {rx},{by + f - .5}"),
+            "topleft": corner(ox, oy, -1, -1),
+            "topright": corner(rx, oy, 1, -1),
+            "bottomleft": corner(ox, by, -1, 1),
+            "bottomright": corner(rx, by, 1, 1),
             "top": f'<rect x="{cx}" y="{oy}" width="{m}" height="{f}" fill="{fill}"{op}/>' + line(cx, oy, m, 1),
             "bottom": f'<rect x="{cx}" y="{by}" width="{m}" height="{f}" fill="{fill}"{op}/>' + line(cx, by + f - 1, m, 1),
             "left": f'<rect x="{ox}" y="{cy}" width="{f}" height="{m}" fill="{fill}"{op}/>' + line(ox, cy, 1, m),
@@ -202,7 +208,7 @@ open(os.path.join(out, "kvantum", "nekozame", "nekozame.svg"), "w").write(kvantu
 # "focus-center" with a prefix); anything not drawn here comes from breeze.
 def nine(prefix, oy, fill, border=None, r=8, opacity=1.0, line=1.0, border_opacity=1.0):
     """a rounded rect as plasma's nine pieces, at row oy. returns (svg, height used)."""
-    m, ox = 24, 10
+    m, ox = 20, 10  # whole pixels at 1.25, 1.35, 1.5 and 2x scaling, or the joints show seams
     p = f"{prefix}-" if prefix else ""
     fo = f' fill-opacity="{opacity}"'
     cx, cy, rx, by = ox + r, oy + r, ox + r + m, oy + r + m
@@ -211,11 +217,21 @@ def nine(prefix, oy, fill, border=None, r=8, opacity=1.0, line=1.0, border_opaci
     st = (lambda d: f'<path d="{d}" fill="none" stroke="{border}" stroke-width="{line}"{bo}/>') if border else (lambda d: "")
     ln = (lambda x, y, w, h: f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{border}" fill-opacity="{border_opacity}"/>') if border else (lambda *a: "")
     h = line
+    def corner(x0, y0, sx, sy):
+        """a quarter disc in the r x r square at (x0, y0); sx, sy: which way the round side faces."""
+        ccx, ccy = (x0 + r if sx < 0 else x0), (y0 + r if sy < 0 else y0)  # the disc's centre
+        def q(rad, col, op):
+            px, py = ccx + sx * rad, ccy + sy * rad
+            sweep = 1 if sx * sy < 0 else 0
+            return f'<path d="M{ccx},{ccy} L{ccx},{py} A{rad},{rad} 0 0 {sweep} {px},{ccy} Z" fill="{col}" fill-opacity="{op}"/>'
+        if border:
+            return q(r, border, border_opacity) + q(r - h, fill, opacity)
+        return q(r, fill, opacity)
     pieces = {
-        "topleft": f'<path d="M{cx},{cy} L{cx},{oy} A{r},{r} 0 0 0 {ox},{cy} Z" fill="{fill}"{fo}/>' + st(f"M{cx},{oy + h/2} A{a},{a} 0 0 0 {ox + h/2},{cy}"),
-        "topright": f'<path d="M{rx},{cy} L{rx},{oy} A{r},{r} 0 0 1 {rx + r},{cy} Z" fill="{fill}"{fo}/>' + st(f"M{rx},{oy + h/2} A{a},{a} 0 0 1 {rx + r - h/2},{cy}"),
-        "bottomleft": f'<path d="M{cx},{by} L{ox},{by} A{r},{r} 0 0 0 {cx},{by + r} Z" fill="{fill}"{fo}/>' + st(f"M{ox + h/2},{by} A{a},{a} 0 0 0 {cx},{by + r - h/2}"),
-        "bottomright": f'<path d="M{rx},{by} L{rx + r},{by} A{r},{r} 0 0 1 {rx},{by + r} Z" fill="{fill}"{fo}/>' + st(f"M{rx + r - h/2},{by} A{a},{a} 0 0 1 {rx},{by + r - h/2}"),
+        "topleft": corner(ox, oy, -1, -1),
+        "topright": corner(rx, oy, 1, -1),
+        "bottomleft": corner(ox, by, -1, 1),
+        "bottomright": corner(rx, by, 1, 1),
         "top": f'<rect x="{cx}" y="{oy}" width="{m}" height="{r}" fill="{fill}"{fo}/>' + ln(cx, oy, m, h),
         "bottom": f'<rect x="{cx}" y="{by}" width="{m}" height="{r}" fill="{fill}"{fo}/>' + ln(cx, by + r - h, m, h),
         "left": f'<rect x="{ox}" y="{cy}" width="{r}" height="{m}" fill="{fill}"{fo}/>' + ln(ox, cy, h, m),
@@ -253,24 +269,38 @@ for d in ("widgets", "dialogs"):
     os.makedirs(os.path.join(P, d), exist_ok=True)
 plasma = {
     # the panel: plum, softly rounded, a faint pink edge (it floats away from the screen edge)
-    "widgets/panel-background.svg": [("", c["panel"], mix(c["panel"], c["orchid"], 0.35), 10, 1.0),
-                                     ("mask", "#000000", None, 10, 1.0)],
+    "widgets/panel-background.svg": [("", c["panel"], mix(c["panel"], c["orchid"], 0.35), 20, 1.0),
+                                     ("mask", "#000000", None, 20, 1.0)],
     # popups (menus, the app launcher, the tray's panels)
-    "dialogs/background.svg": [("", c["panel"], c["raised"], 10, 1.0)],
-    "widgets/tooltip.svg": [("", c["deep"], c["orchid"], 8, 1.0)],
-    "widgets/background.svg": [("", c["panel"], c["raised"], 10, 1.0)],
+    "dialogs/background.svg": [("", c["panel"], c["raised"], 20, 1.0)],
+    "widgets/tooltip.svg": [("", c["deep"], c["orchid"], 20, 1.0)],
+    "widgets/background.svg": [("", c["panel"], c["raised"], 20, 1.0)],
     # the task manager: the open app glows pink, hover lilac, attention butter yellow
     "widgets/tasks.svg": [("normal", "#000000", None, 6, 0.0), ("minimized", "#000000", None, 6, 0.0),
-                          ("focus", mix(c["panel"], c["orchid"], 0.30), c["orchid"], 6, 1.0),
-                          ("hover", mix(c["panel"], c["violet"], 0.22), None, 6, 1.0),
-                          ("attention", mix(c["panel"], c["butter"], 0.35), c["butter"], 6, 1.0)],
+                          ("focus", mix(c["panel"], c["orchid"], 0.30), c["orchid"], 20, 1.0),
+                          ("hover", mix(c["panel"], c["violet"], 0.22), None, 20, 1.0),
+                          ("attention", mix(c["panel"], c["butter"], 0.35), c["butter"], 20, 1.0)],
     # highlighted rows in lists: the launcher, the tray, settings
-    "widgets/viewitem.svg": [("hover", mix(c["panel"], c["orchid"], 0.25), None, 6, 1.0),
-                             ("selected", mix(c["panel"], c["orchid"], 0.55), None, 6, 1.0),
-                             ("selected+hover", mix(c["panel"], c["orchid"], 0.70), None, 6, 1.0)],
+    "widgets/viewitem.svg": [("hover", mix(c["panel"], c["orchid"], 0.25), None, 20, 1.0),
+                             ("selected", mix(c["panel"], c["orchid"], 0.55), None, 20, 1.0),
+                             ("selected+hover", mix(c["panel"], c["orchid"], 0.70), None, 20, 1.0)],
 }
+# the panel's padding: plasma takes it from the corner pieces (10px) unless hints say
+# otherwise, which shrinks what's on the panel (the launcher's icon most)
+PANEL_HINTS = ('<rect id="hint-top-margin" x="0" y="0" width="3" height="3" fill="none"/>'
+               '<rect id="hint-bottom-margin" x="0" y="0" width="3" height="3" fill="none"/>'
+               '<rect id="hint-left-margin" x="0" y="0" width="6" height="3" fill="none"/>'
+               '<rect id="hint-right-margin" x="0" y="0" width="6" height="3" fill="none"/>')
 for name, frames in plasma.items():
-    open(os.path.join(P, name), "w").write(plasma_svg(frames))
+    svg = plasma_svg(frames)
+    if name == "widgets/panel-background.svg":
+        svg = svg.replace("\n</svg>", "\n" + PANEL_HINTS + "\n</svg>")
+    if name == "widgets/tasks.svg":  # small padding round each app, so they sit close together
+        hints = "".join(f'<rect id="{p}-hint-{side}-margin" x="0" y="0" width="2" height="2" fill="none"/>'
+                        for p in ("normal", "minimized", "focus", "hover", "attention")
+                        for side in ("top", "bottom", "left", "right"))
+        svg = svg.replace("\n</svg>", "\n" + hints + "\n</svg>")
+    open(os.path.join(P, name), "w").write(svg)
 # window decorations (kwin's aurorae): a plum title bar with round, mac-style buttons
 # in the palette's pastels. a button is one svg with a piece per state; the title bar
 # is nine pieces per state (active, inactive), like everything else here.
