@@ -99,11 +99,35 @@
     }
   }
 
+  // stylesheets from another address (the store's come from steam's cdn) can't be
+  // read from here: fetch their text, swap the colours in it, put that copy in the page
+  // and switch the original off. relative urls in them are made absolute first
+  function swapText(css, base) {
+    css = css.replace(/url\(\s*(['"]?)([^'")]+)\1\s*\)/g, (m, q, u) => {
+      try { return `url("${new URL(u, base).href}")`; } catch (e) { return m; }
+    });
+    return css.replace(/([\w-]+)(\s*:\s*)([^;{}]+)/g, (m, prop, sep, val) =>
+      COLOR.test(val) ? (COLOR.lastIndex = 0, prop + sep + swapValue(val, TEXTY.test(prop))) : (COLOR.lastIndex = 0, m));
+  }
+  const fetching = new Set();
+  function copyOf(sheet) {
+    const href = sheet.href;
+    if (!href || fetching.has(href) || !sheet.ownerNode) return;
+    fetching.add(href);
+    fetch(href).then((r) => r.text()).then((css) => {
+      const style = document.createElement("style");
+      style.dataset.nekozame = href;
+      style.textContent = swapText(css, href);
+      sheet.ownerNode.after(style);
+      sheet.disabled = true;
+    }).catch(() => {});
+  }
+
   const done = new WeakSet();
   function sweep() {
     for (const sheet of document.styleSheets) {
       if (done.has(sheet)) continue;
-      try { doRules(sheet.cssRules); done.add(sheet); } catch (e) { /* not ready yet, or another site's */ }
+      try { doRules(sheet.cssRules); done.add(sheet); } catch (e) { copyOf(sheet); }
     }
   }
   sweep();

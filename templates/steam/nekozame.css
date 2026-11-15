@@ -85,3 +85,16 @@
     --touchmenuicon-bg: {{deep}};
     --touchmenuicon-fg: {{dim}};
 }
+
+/* rounded, like everything nekozame: game covers, art, screenshots and avatars, and
+   the focus ring around them */
+img,
+video,
+[style*="background-image"] {
+    border-radius: 14px !important;
+}
+:focus-visible,
+.gpfocus,
+.gpfocuswithin {
+    border-radius: 14px;
+}
