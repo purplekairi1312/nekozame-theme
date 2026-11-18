@@ -64,6 +64,7 @@ Everything is in [`themes/`](themes).
 | Zen Browser | `zen/userChrome.css`, `zen/userContent.css` (links on pages Dark Reader darkens, GitHub and YouTube in nekozame) | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
 | DankMaterialShell | `dms/nekozame.json` | Settings → Theme & Colors → Custom, or `"currentThemeName": "custom"` and `"customThemeFile"` in `~/.config/dms/settings.json` |
 | Discord | `discord/nekozame.theme.css` | Vencord's themes folder |
+| Heroic Games Launcher | `heroic/nekozame.css` | Heroic's custom themes folder (Settings → Accessibility → Custom Themes Path), then pick it under Select Theme |
 | Dark Reader | `darkreader/nekozame.json` (off on GitHub and YouTube, which have their own) | Dark Reader → Settings → Advanced → Import Settings |
 | YouTube | `improvedtube/nekozame.json`, for [ImprovedTube](https://github.com/code-charity/youtube)'s custom theme | ImprovedTube → Settings → Backup & reset → Import settings (only changes the theme) |
 | Bitwig Studio | `bitwig/nekozame.bte` | load it with the [Bitwig Theme Editor](https://github.com/Berikai/bitwig-theme-editor): see [its readme](themes/bitwig/README.md) |

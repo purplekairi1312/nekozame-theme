@@ -1,0 +1,108 @@
+/* nekozame for Heroic Games Launcher. generated from palette.toml by generate.py; edit the palette there.
+   put it in Heroic's custom themes folder (Settings → Accessibility → Custom Themes Path),
+   then pick "nekozame" under Select Theme. */
+body.nekozame {
+  /* Heroic's base colours: everything else is worked out from these */
+  --neutral-01: {{deep}};
+  --neutral-02: {{panel}};
+  --neutral-03: {{raised}};
+  --neutral-04: {{region}};
+  --neutral-05: {{linenum}};
+  --neutral-06: {{muted}};
+  --on-panel: {{fg}};
+  --on-panel-muted: {{muted}};
+  --on-panel-faint: {{dim}};
+  --on-nav: {{orchid}};
+  --on-nav-muted: {{muted}};
+  --ink-on-accent: {{deep}};
+  --brand-primary: {{orchid}};
+  --brand-primary-hover: {{pink}};
+  --brand-secondary: {{selection}};
+  --brand-secondary-hover: {{region}};
+  --status-success: {{mint}};
+  --status-success-hover: {{green}};
+  --status-warning: {{butter}};
+  --status-warning-hover: {{peach}};
+  --status-danger: {{error}};
+  --status-danger-hover: {{rose}};
+  --status-default: {{orchid}};
+  --status-denied: {{dim}};
+  --eighty-percent-black: rgba({{deep|rgb}}, 0.8);
+
+  /* backgrounds */
+  --background: {{panel}};
+  --background-darker: {{deep}};
+  --background-darker-80: rgba({{deep|rgb}}, 0.8);
+  --background-lighter: {{raised}};
+  --background-secondary: {{raised}};
+  --body-background: {{bg}};
+  --current-background: var(--body-background);
+  --gradient-body-background: linear-gradient(90deg, var(--background-darker) -32px, var(--body-background) 64px, var(--body-background) 100%);
+  --input-background: {{deep}};
+  --modal-background: {{panel}};
+  --modal-backdrop: rgba({{deep|rgb}}, 0.8);
+  --modal-border: {{selection}};
+  --osk-background: {{panel}};
+  --osk-button-background: {{raised}};
+  --osk-button-border: {{deep}};
+  --search-bar-background: {{deep}};
+  --search-bar-border: {{selection}};
+  --controller-hints-background: transparent;
+  --divider: {{raised}};
+
+  /* text */
+  --text-default: {{fg}};
+  --text-secondary: {{muted}};
+  --text-tertiary: {{deep}};
+  --text-quartenary: {{dim}};
+  --text-title: {{pink}};
+  --text-hover: {{orchid}};
+  --link-highlight: {{link}};
+
+  /* the sidebar */
+  --navbar-background: {{panel}};
+  --navbar-active-background: {{selection}};
+  --navbar-active: {{fg}};
+  --navbar-inactive: {{muted}};
+  --navbar-accent: {{orchid}};
+
+  /* buttons and icons */
+  --accent: {{orchid}};
+  --accent-overlay: {{pink}};
+  --primary: {{orchid}};
+  --primary-hover: {{pink}};
+  --secondary: {{selection}};
+  --primary-button: {{orchid}};
+  --secondary-button: {{selection}};
+  --secondary-button-overlay: {{region}};
+  --button-stroke: {{orchid}};
+  --play-button: {{orchid}};
+  --install-button: {{selection}};
+  --download-button: {{blue}};
+  --download-button-overlay: {{cyan}};
+  --success: {{mint}};
+  --success-hover: {{green}};
+  --success-button: {{mint}};
+  --danger: {{error}};
+  --danger-hover: {{rose}};
+  --cancel-button: {{error}};
+  --cancel-button-overlay: {{rose}};
+  --tertiary-button: {{butter}};
+  --tertiary-button-overlay: {{peach}};
+  --disabled-button: {{raised}};
+  --disabled-button-overlay: {{linenum}};
+  --icons-background: {{raised}};
+  --action-icon: {{muted}};
+  --action-icon-hover: {{orchid}};
+  --action-icon-active: {{pink}};
+  --icon-disabled: {{dim}};
+  --icon-disabled-overlay: {{linenum}};
+
+  /* anticheat badges */
+  --anticheat-denied: {{error}};
+  --anticheat-broken: {{butter}};
+  --anticheat-running: {{orchid}};
+  --anticheat-supported: {{mint}};
+  --anticheat-planned: {{violet}};
+  --anticheat-unknown: {{dim}};
+}

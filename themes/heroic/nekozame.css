@@ -1,0 +1,108 @@
+/* nekozame for Heroic Games Launcher. generated from palette.toml by generate.py; edit the palette there.
+   put it in Heroic's custom themes folder (Settings → Accessibility → Custom Themes Path),
+   then pick "nekozame" under Select Theme. */
+body.nekozame {
+  /* Heroic's base colours: everything else is worked out from these */
+  --neutral-01: #433a55;
+  --neutral-02: #4f4562;
+  --neutral-03: #685c7f;
+  --neutral-04: #7c6a9a;
+  --neutral-05: #a094b8;
+  --neutral-06: #e8def5;
+  --on-panel: #ffffff;
+  --on-panel-muted: #e8def5;
+  --on-panel-faint: #b3a7cb;
+  --on-nav: #ffc0e5;
+  --on-nav-muted: #e8def5;
+  --ink-on-accent: #433a55;
+  --brand-primary: #ffc0e5;
+  --brand-primary-hover: #ffd4ee;
+  --brand-secondary: #8a76a8;
+  --brand-secondary-hover: #7c6a9a;
+  --status-success: #c8f7dc;
+  --status-success-hover: #dcf8bc;
+  --status-warning: #fff1b0;
+  --status-warning-hover: #ffd2b8;
+  --status-danger: #ffb3c8;
+  --status-danger-hover: #ffc0d2;
+  --status-default: #ffc0e5;
+  --status-denied: #b3a7cb;
+  --eighty-percent-black: rgba(67,58,85, 0.8);
+
+  /* backgrounds */
+  --background: #4f4562;
+  --background-darker: #433a55;
+  --background-darker-80: rgba(67,58,85, 0.8);
+  --background-lighter: #685c7f;
+  --background-secondary: #685c7f;
+  --body-background: #5a4f6e;
+  --current-background: var(--body-background);
+  --gradient-body-background: linear-gradient(90deg, var(--background-darker) -32px, var(--body-background) 64px, var(--body-background) 100%);
+  --input-background: #433a55;
+  --modal-background: #4f4562;
+  --modal-backdrop: rgba(67,58,85, 0.8);
+  --modal-border: #8a76a8;
+  --osk-background: #4f4562;
+  --osk-button-background: #685c7f;
+  --osk-button-border: #433a55;
+  --search-bar-background: #433a55;
+  --search-bar-border: #8a76a8;
+  --controller-hints-background: transparent;
+  --divider: #685c7f;
+
+  /* text */
+  --text-default: #ffffff;
+  --text-secondary: #e8def5;
+  --text-tertiary: #433a55;
+  --text-quartenary: #b3a7cb;
+  --text-title: #ffd4ee;
+  --text-hover: #ffc0e5;
+  --link-highlight: #ffc6ea;
+
+  /* the sidebar */
+  --navbar-background: #4f4562;
+  --navbar-active-background: #8a76a8;
+  --navbar-active: #ffffff;
+  --navbar-inactive: #e8def5;
+  --navbar-accent: #ffc0e5;
+
+  /* buttons and icons */
+  --accent: #ffc0e5;
+  --accent-overlay: #ffd4ee;
+  --primary: #ffc0e5;
+  --primary-hover: #ffd4ee;
+  --secondary: #8a76a8;
+  --primary-button: #ffc0e5;
+  --secondary-button: #8a76a8;
+  --secondary-button-overlay: #7c6a9a;
+  --button-stroke: #ffc0e5;
+  --play-button: #ffc0e5;
+  --install-button: #8a76a8;
+  --download-button: #b8e4ff;
+  --download-button-overlay: #b8f5f2;
+  --success: #c8f7dc;
+  --success-hover: #dcf8bc;
+  --success-button: #c8f7dc;
+  --danger: #ffb3c8;
+  --danger-hover: #ffc0d2;
+  --cancel-button: #ffb3c8;
+  --cancel-button-overlay: #ffc0d2;
+  --tertiary-button: #fff1b0;
+  --tertiary-button-overlay: #ffd2b8;
+  --disabled-button: #685c7f;
+  --disabled-button-overlay: #a094b8;
+  --icons-background: #685c7f;
+  --action-icon: #e8def5;
+  --action-icon-hover: #ffc0e5;
+  --action-icon-active: #ffd4ee;
+  --icon-disabled: #b3a7cb;
+  --icon-disabled-overlay: #a094b8;
+
+  /* anticheat badges */
+  --anticheat-denied: #ffb3c8;
+  --anticheat-broken: #fff1b0;
+  --anticheat-running: #ffc0e5;
+  --anticheat-supported: #c8f7dc;
+  --anticheat-planned: #e3ccff;
+  --anticheat-unknown: #b3a7cb;
+}
