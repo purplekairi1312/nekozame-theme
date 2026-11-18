@@ -37,19 +37,18 @@ body.nekozame {
   --background-secondary: {{raised}};
   --body-background: {{bg}};
   --current-background: var(--body-background);
-  /* the page: a soft trans-flag glow, blue from the top left, pink to the bottom right */
-  --gradient-body-background: linear-gradient(150deg, rgba({{blue|rgb}}, 0.22) 0%, rgba({{bg|rgb}}, 0) 32%, rgba({{bg|rgb}}, 0) 62%, rgba({{orchid|rgb}}, 0.3) 100%), {{bg}};
+  --gradient-body-background: linear-gradient(90deg, var(--background-darker) -32px, var(--body-background) 64px, var(--body-background) 100%);
   --input-background: {{deep}};
   --modal-background: {{panel}};
   --modal-backdrop: rgba({{deep|rgb}}, 0.8);
-  --modal-border: {{orchid}};
+  --modal-border: {{selection}};
   --osk-background: {{panel}};
   --osk-button-background: {{raised}};
   --osk-button-border: {{deep}};
   --search-bar-background: {{deep}};
-  --search-bar-border: {{orchid}};
+  --search-bar-border: {{selection}};
   --controller-hints-background: transparent;
-  --divider: rgba({{orchid|rgb}}, 0.35);
+  --divider: {{raised}};
 
   /* text */
   --text-default: {{fg}};
@@ -62,10 +61,10 @@ body.nekozame {
 
   /* the sidebar */
   --navbar-background: {{panel}};
-  --navbar-active-background: rgba({{orchid|rgb}}, 0.32);
-  --navbar-active: {{fg}};
+  --navbar-active-background: {{orchid}};
+  --navbar-active: {{deep}};
   --navbar-inactive: {{muted}};
-  --navbar-accent: {{blue}};
+  --navbar-accent: {{orchid}};
 
   /* buttons and icons */
   --accent: {{orchid}};
@@ -74,7 +73,7 @@ body.nekozame {
   --primary-hover: {{pink}};
   --secondary: {{selection}};
   --primary-button: {{orchid}};
-  --secondary-button: {{blue}};
+  --secondary-button: {{selection}};
   --secondary-button-overlay: {{region}};
   --button-stroke: {{orchid}};
   --play-button: {{orchid}};
@@ -108,9 +107,9 @@ body.nekozame {
   --anticheat-unknown: {{dim}};
 }
 
-/* the sidebar in the trans flag's colours, soft over the plum: blue, pink, white, pink, blue */
+/* a thin trans flag down the sidebar's edge: blue, pink, white, pink, blue */
 body.nekozame .Sidebar {
-  --sidebar-background: linear-gradient(180deg,
-    rgba({{blue|rgb}}, 0.30) 0%, rgba({{orchid|rgb}}, 0.26) 30%, rgba({{fg|rgb}}, 0.14) 50%,
-    rgba({{orchid|rgb}}, 0.26) 70%, rgba({{blue|rgb}}, 0.24) 100%), {{panel}};
+  border-right: 4px solid {{orchid}};
+  border-image: linear-gradient(180deg, {{blue}} 0%, {{blue}} 20%, {{orchid}} 20%, {{orchid}} 40%,
+    {{fg}} 40%, {{fg}} 60%, {{orchid}} 60%, {{orchid}} 80%, {{blue}} 80%, {{blue}} 100%) 1;
 }

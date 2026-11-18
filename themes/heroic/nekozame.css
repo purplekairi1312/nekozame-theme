@@ -37,19 +37,18 @@ body.nekozame {
   --background-secondary: #685c7f;
   --body-background: #5a4f6e;
   --current-background: var(--body-background);
-  /* the page: a soft trans-flag glow, blue from the top left, pink to the bottom right */
-  --gradient-body-background: linear-gradient(150deg, rgba(184,228,255, 0.22) 0%, rgba(90,79,110, 0) 32%, rgba(90,79,110, 0) 62%, rgba(255,192,229, 0.3) 100%), #5a4f6e;
+  --gradient-body-background: linear-gradient(90deg, var(--background-darker) -32px, var(--body-background) 64px, var(--body-background) 100%);
   --input-background: #433a55;
   --modal-background: #4f4562;
   --modal-backdrop: rgba(67,58,85, 0.8);
-  --modal-border: #ffc0e5;
+  --modal-border: #8a76a8;
   --osk-background: #4f4562;
   --osk-button-background: #685c7f;
   --osk-button-border: #433a55;
   --search-bar-background: #433a55;
-  --search-bar-border: #ffc0e5;
+  --search-bar-border: #8a76a8;
   --controller-hints-background: transparent;
-  --divider: rgba(255,192,229, 0.35);
+  --divider: #685c7f;
 
   /* text */
   --text-default: #ffffff;
@@ -62,10 +61,10 @@ body.nekozame {
 
   /* the sidebar */
   --navbar-background: #4f4562;
-  --navbar-active-background: rgba(255,192,229, 0.32);
-  --navbar-active: #ffffff;
+  --navbar-active-background: #ffc0e5;
+  --navbar-active: #433a55;
   --navbar-inactive: #e8def5;
-  --navbar-accent: #b8e4ff;
+  --navbar-accent: #ffc0e5;
 
   /* buttons and icons */
   --accent: #ffc0e5;
@@ -74,7 +73,7 @@ body.nekozame {
   --primary-hover: #ffd4ee;
   --secondary: #8a76a8;
   --primary-button: #ffc0e5;
-  --secondary-button: #b8e4ff;
+  --secondary-button: #8a76a8;
   --secondary-button-overlay: #7c6a9a;
   --button-stroke: #ffc0e5;
   --play-button: #ffc0e5;
@@ -108,9 +107,9 @@ body.nekozame {
   --anticheat-unknown: #b3a7cb;
 }
 
-/* the sidebar in the trans flag's colours, soft over the plum: blue, pink, white, pink, blue */
+/* a thin trans flag down the sidebar's edge: blue, pink, white, pink, blue */
 body.nekozame .Sidebar {
-  --sidebar-background: linear-gradient(180deg,
-    rgba(184,228,255, 0.30) 0%, rgba(255,192,229, 0.26) 30%, rgba(255,255,255, 0.14) 50%,
-    rgba(255,192,229, 0.26) 70%, rgba(184,228,255, 0.24) 100%), #4f4562;
+  border-right: 4px solid #ffc0e5;
+  border-image: linear-gradient(180deg, #b8e4ff 0%, #b8e4ff 20%, #ffc0e5 20%, #ffc0e5 40%,
+    #ffffff 40%, #ffffff 60%, #ffc0e5 60%, #ffc0e5 80%, #b8e4ff 80%, #b8e4ff 100%) 1;
 }
