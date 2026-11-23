@@ -1,0 +1,20 @@
+/* nekozame for OpenWebRX+. generated from palette.toml by generate.py; edit the palette there. */
+body.theme-nekozame {
+    --theme-color1: {{bg}};
+    --theme-color2: {{panel}};
+    --theme-gradient-color1: {{bg}};
+    --theme-gradient-color2: {{raised}};
+}
+
+/* buttons: raised violet on hover, pink with dark text when on */
+body.theme-nekozame .openwebrx-button:hover {
+    background: {{raised}};
+    color: {{pink}};
+}
+
+body.theme-nekozame .openwebrx-button.highlighted,
+body.theme-nekozame .openwebrx-demodulator-button.highlighted,
+body.theme-nekozame .openwebrx-button:active {
+    background: {{orchid}};
+    color: {{deep}};
+}
