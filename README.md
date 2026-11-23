@@ -61,6 +61,7 @@ Everything is in [`themes/`](themes).
 | cava | `cava/config` | `~/.config/cava/config`, or `cava -p` it |
 | tmux | `tmux/nekozame.conf` | `source-file` it from your tmux.conf |
 | Starship | `starship/starship.toml` | `~/.config/starship.toml` (a full prompt config) |
+| tracker (the satellite map in the terminal) | `tracker/config.toml` | `~/.config/tracker/config.toml`, or copy its `[world_map]` part into yours |
 | OpenWebRX+ (the page and the waterfall) | `openwebrx/nekozame/` | copy the folder to `htdocs/plugins/receiver/` (on Debian, `/usr/lib/python3/dist-packages/htdocs/plugins/receiver/`) and add `Plugins.load("nekozame");` to `init.js` there; it becomes the default, and each browser can still pick another theme |
 | Zen Browser | `zen/userChrome.css`, `zen/userContent.css` (links on pages Dark Reader darkens, GitHub and YouTube in nekozame) | `chrome/` in your profile, with `toolkit.legacyUserProfileCustomizations.stylesheets` on |
 | DankMaterialShell | `dms/nekozame.json` | Settings → Theme & Colors → Custom, or `"currentThemeName": "custom"` and `"customThemeFile"` in `~/.config/dms/settings.json` |

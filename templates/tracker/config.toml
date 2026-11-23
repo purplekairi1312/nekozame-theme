@@ -1,0 +1,11 @@
+# nekozame for tracker (https://github.com/ShenMian/tracker), the satellite map
+# in the terminal. generated from palette.toml by generate.py; edit the palette there.
+# Needs a truecolor terminal. Anything left out keeps tracker's default.
+
+[world_map]
+# the lit side of the Earth; the night side is a darker shade of it
+day_color = "{{bg}}"
+coast_color = "{{violet}}"
+trajectory_color = "{{orchid}}"
+terminator_color = "{{linenum}}"
+visibility_area_color = "{{butter}}"
